@@ -1,0 +1,245 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'OpenSans';
+    font-weight: 400;
+    color: $color-body;
+    background-color: $white;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+svg {
+    fill: transparent;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1320px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.user-icon {
+    width: 32px;
+    height: 32px;
+    fill: $white;
+
+    &--tell {
+        width: 22px;
+    }
+
+    &--chosen {
+        fill: $silver-600;
+
+        &:hover {
+            fill: $yellow-900;
+        }
+    }
+
+    &--basket {
+        width: 16px;
+        height: 16px;
+    }
+
+    &--chosen,
+    &--basket {
+        &:active {
+            opacity: 0.5;
+        }
+    }
+
+    &--search {
+        width: 20px;
+        height: 20px;
+        fill: $green-900;
+    }
+}
+
+.button {
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    padding: 12px 24px;
+    border-radius: 6px;
+    background-color: $green-900;
+    border: 1px solid transparent;
+    color: $white;
+
+    &:hover {
+        background-color: $green-hov;
+    }
+
+    &:focus {
+        box-shadow: 0px 0px 0px 4px $green-200;
+    }
+
+    &:active {
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.price {
+    &__old {
+        display: inline-block;
+    }
+
+    &__sale,
+    &__old {
+        position: relative;
+        padding-right: 14px;
+        line-height: 1;
+        letter-spacing: 0.03em;
+        color: $dark-500;
+
+        &::after {
+            content: "\f158";
+            font-family: 'icomoon';
+            position: absolute;
+            right: 0;
+            bottom: -1px;
+            color: inherit;
+            line-height: inherit;
+            font-weight: inherit;
+        }
+    }
+
+    &__sale {
+        display: none;
+        color: $silver-600;
+
+        &::after {
+            color: inherit;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 6px;
+            left: 0;
+            transform: rotate(-20deg);
+            width: 100%;
+            height: 1px;
+            background-color: $silver-600;
+        }
+
+        &--sale {
+            display: inline-block;
+        }
+    }
+}
+
+.title {
+    font-family: 'Ruda';
+    font-weight: 600;
+    font-size: 32px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.badge {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 1;
+    color: $white;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    @extend %transition;
+
+    &__hit,
+    &__new,
+    &__sale {
+        display: none;
+        padding: 3px 6px;
+        border-radius: 6px;
+
+        &--hit,
+        &--new,
+        &--sale {
+            display: block;
+        }
+    }
+
+    &__hit {
+        background-color: $orange-900;
+    }
+
+    &__new {
+        background-color: $green-900;
+    }
+
+    &__sale {
+        background-color: $red-900;
+    }
+}
+
+.user-nav {
+    @extend %transition;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &:focus {
+        box-shadow: inset 0px 0px 0px 3px $green-100;
+        border-radius: 3px;
+    }
+
+    &__icon {
+        &:active {
+            fill: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    &__number {
+        position: absolute;
+        top: 3px;
+        left: 1px;
+        background-color: $white;
+        border-radius: 50%;
+        color: $red-900;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 1;
+        padding: 3px 4px;
+    }
+
+    &--chosen,
+    &--basket {
+        &:focus {
+            box-shadow: 0px 0px 0px 3px $green-200;
+            border-radius: 3px;
+        }
+    }
+
+    &--basket {
+        &:active {
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+}

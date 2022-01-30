@@ -1,0 +1,23 @@
+$color-body: #121212;
+$green-900: #63A60F;
+$green-hov: #4D800C;
+$green-200: #E0EDCF;
+$green-100: #EFF6E7;
+$dark-800: #31352B;
+$dark-500: #505050;
+$red-900: #CF3E3B;
+$orange-900: #FF7A00;
+$yellow-900: #FFB800;
+$silver-600: #C1C1C1;
+$silver-100: #F6F6F6;
+$white: #ffffff;
+
+%bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+%transition {
+    transition: all 0.3s;
+}
