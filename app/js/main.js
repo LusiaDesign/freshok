@@ -1,6 +1,6 @@
 $(function () {
     $('.catalog__btn').on('click', function () {
-        $('.catalog__btn, .catalog__list').toggleClass('active');
+        $('.catalog__btn, .catalog__dropdown').toggleClass('active');
     });
     $('.user-btn--basket').on('click', function () {
         $('.basket').toggleClass('active');
@@ -12,7 +12,7 @@ $(function () {
         var block = $(".catalog, .basket");
         if (!block.is(e.target) &&
             block.has(e.target).length === 0) {
-            $('.catalog__btn, .catalog__list, .basket').removeClass('active');
+            $('.catalog__btn, .catalog__dropdown, .basket').removeClass('active');
         }
     });
     $('.banner__wrapper').slick({
