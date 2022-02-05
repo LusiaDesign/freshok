@@ -1,0 +1,32 @@
+.categories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+
+    &__btn {
+        font-weight: 700;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: $dark-500;
+        border-radius: 3px;
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+            color: $green-900;
+        }
+
+        &:focus {
+            box-shadow: 0px 0px 0px 3px $green-200;
+        }
+
+        &:active {
+            border-bottom: 2px solid rgba(99, 166, 14, 0.2);
+        }
+    }
+}

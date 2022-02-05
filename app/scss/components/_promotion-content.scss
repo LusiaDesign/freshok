@@ -1,0 +1,21 @@
+.promotion-content {
+    padding-top: 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        max-width: 23%;
+
+        &--big {
+            max-width: 49%;
+
+            .promotion__title {
+                max-width: 346px;
+            }
+        }
+    }
+}

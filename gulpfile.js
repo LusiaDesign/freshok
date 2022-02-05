@@ -12,6 +12,7 @@ const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const svgSprite = require('gulp-svg-sprite');
 const cheerio = require('gulp-cheerio');
+const fileinclude = require('gulp-file-include');
 const replace = require('gulp-replace');
 const del = require('del');
 const browserSync = require('browser-sync').create();
@@ -107,6 +108,18 @@ function svgSprites() {
         .pipe(dest('app/images'));
 }
 
+
+const htmlInclude = () => {
+    return src(['app/html/*.html'])
+        .pipe(fileinclude({
+            prefix: '@',
+            basepath: '@file',
+        }))
+        .pipe(dest('app'))
+        .pipe(browserSync.stream());
+}
+
+
 function build() {
     return src([
             'app/**/*.html',
@@ -128,6 +141,7 @@ function watching() {
     watch(['app/scss/**/*.scss'], styles);
     watch(['app/images/icons/*.svg'], svgSprites);
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
+    watch(['app/html/**/*.html'], htmlInclude);
     watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
@@ -139,5 +153,6 @@ exports.watching = watching;
 exports.images = images;
 exports.svgSprites = svgSprites;
 exports.cleandist = cleandist;
+exports.htmlInclude = htmlInclude;
 exports.build = series(cleandist, images, build);
-exports.default = parallel(svgSprites, styles, scripts, browsersync, watching);
+exports.default = parallel(htmlInclude, svgSprites, styles, scripts, browsersync, watching);

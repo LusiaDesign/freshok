@@ -6,16 +6,26 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    font-family: 'OpenSans';
+    font-family: 'OpenSans', sans-serif;
     font-weight: 400;
-    color: $color-body;
-    background-color: $white;
     line-height: 1.4;
     font-size: 14px;
+    letter-spacing: 0.03em;
+    color: $color-body;
+    background-color: $white;
 }
 
-svg {
-    fill: transparent;
+button,
+input,
+a {
+    transition: all 0.3s;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    margin-left: 20px;
 }
 
 .sr-only {
@@ -38,53 +48,35 @@ svg {
 }
 
 .section {
-    padding: 75px 0;
+    padding: 72px 0;
 }
 
 .main {
     flex-grow: 1;
 }
 
-.user-icon {
-    width: 32px;
-    height: 32px;
-    fill: $white;
+.input {
+    background-color: $white;
+    border-radius: 6px 0 0 6px;
 
-    &--tell {
-        width: 22px;
+    &:hover {
+        background-color: $green-200;
     }
 
-    &--chosen {
-        fill: $silver-600;
-
-        &:hover {
-            fill: $yellow-900;
-        }
+    &:focus {
+        outline: 1px solid #63A60E;
+        box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
     }
 
-    &--basket {
-        width: 16px;
-        height: 16px;
-    }
-
-    &--chosen,
-    &--basket {
-        &:active {
-            opacity: 0.5;
-        }
-    }
-
-    &--search {
-        width: 20px;
-        height: 20px;
-        fill: $green-900;
+    &:active {
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 }
 
 .button {
+    display: inline-block;
     font-size: 18px;
     line-height: 1.3;
-    letter-spacing: 0.03em;
     padding: 12px 24px;
     border-radius: 6px;
     background-color: $green-900;
@@ -102,126 +94,145 @@ svg {
     &:active {
         box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
+
+    &--light {
+        background-color: $white;
+        border: 1px solid $green-900;
+        color: $green-900;
+
+        &:hover {
+            background-color: $green-100;
+        }
+
+        &:active {
+            opacity: 0.5;
+            box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
+        }
+    }
 }
 
-.price {
-    &__old {
-        display: inline-block;
-    }
+.form-btn {
+    color: $white;
+    text-transform: uppercase;
+    border-radius: 0px 6px 6px 0px;
 
-    &__sale,
-    &__old {
-        position: relative;
-        padding-right: 14px;
-        line-height: 1;
-        letter-spacing: 0.03em;
-        color: $dark-500;
-
-        &::after {
-            content: "\f158";
-            font-family: 'icomoon';
-            position: absolute;
-            right: 0;
-            bottom: -1px;
-            color: inherit;
-            line-height: inherit;
-            font-weight: inherit;
-        }
-    }
-
-    &__sale {
-        display: none;
-        color: $silver-600;
-
-        &::after {
-            color: inherit;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: 6px;
-            left: 0;
-            transform: rotate(-20deg);
-            width: 100%;
-            height: 1px;
-            background-color: $silver-600;
-        }
-
-        &--sale {
-            display: inline-block;
-        }
+    &:active {
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 }
 
 .title {
-    font-family: 'Ruda';
+    font-family: 'Ruda', sans-serif;
     font-weight: 600;
     font-size: 32px;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
-    text-align: center;
     margin-bottom: 30px;
-
 }
 
 .badge {
-    display: flex;
-    flex-direction: column;
+    display: block;
     font-weight: 700;
     font-size: 10px;
     line-height: 1;
     color: $white;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
-    @extend %transition;
+    padding: 3px 6px;
+    border-radius: 6px;
 
-    &__hit,
-    &__new,
-    &__sale {
-        display: none;
-        padding: 3px 6px;
-        border-radius: 6px;
-
-        &--hit,
-        &--new,
-        &--sale {
-            display: block;
-        }
-    }
-
-    &__hit {
-        background-color: $orange-900;
-    }
-
-    &__new {
+    &__new-product {
         background-color: $green-900;
     }
 
-    &__sale {
+    &__hit-product {
+        background-color: $orange-900;
+    }
+
+    &__sale-product {
         background-color: $red-900;
+    }
+
+}
+
+.chosen-btn,
+.basket-btn {
+    &:focus {
+        box-shadow: 0px 0px 0px 3px $green-200;
     }
 }
 
-.user-nav {
-    @extend %transition;
+.chosen-btn {
+    width: 44px;
+    height: 44px;
+    padding: 8px 6px;
+    border-radius: 3px;
+
+    &__chosen-icon {
+        fill: $silver-600;
+    }
+
+    &:hover {
+        .chosen-btn__chosen-icon {
+            fill: $yellow-900;
+        }
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+}
+
+.basket-btn {
+    background-color: $green-900;
+    border-radius: 3px;
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+
+    &__basket-icon {
+        fill: $white;
+    }
+
+    &:hover {
+        background-color: $green-hov;
+    }
+
+    &:active {
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        .basket-btn__basket-icon {
+            opacity: 0.5;
+        }
+    }
+}
+
+.user-btn {
+    position: relative;
+    padding: 7px 9px;
+    border-radius: 3px;
+    background-color: transparent;
 
     &:hover {
         background-color: rgba(255, 255, 255, 0.1);
     }
 
     &:focus {
+        background-color: rgba(255, 255, 255, 0.1);
         box-shadow: inset 0px 0px 0px 3px $green-100;
-        border-radius: 3px;
     }
 
-    &__icon {
-        &:active {
+    &:active {
+        background-color: rgba(255, 255, 255, 0.1);
+
+        .user-btn__icon {
             fill: rgba(255, 255, 255, 0.5);
         }
     }
 
-    &__number {
+    &__icon {
+        fill: $white;
+    }
+
+    &__counter {
         position: absolute;
         top: 3px;
         left: 1px;
@@ -233,18 +244,65 @@ svg {
         line-height: 1;
         padding: 3px 4px;
     }
+}
 
-    &--chosen,
-    &--basket {
-        &:focus {
-            box-shadow: 0px 0px 0px 3px $green-200;
-            border-radius: 3px;
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    padding: 14px 21px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    z-index: 1;
+
+    &__icon {
+        flex-shrink: 0;
+        fill: $dark-500;
+    }
+
+    &:hover {
+        background-color: $green-200;
+
+        .slick-arrow__icon {
+            fill: $green-900;
         }
     }
 
-    &--basket {
-        &:active {
-            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    &:focus {
+        box-shadow: 0px 0px 0px 3px rgba(99, 166, 14, 0.5);
+
+        .slick-arrow__icon {
+            fill: #5a5a5a;
         }
+    }
+
+    &:active {
+        .slick-arrow__icon {
+            fill: $green-900;
+        }
+    }
+}
+
+.slick-next {
+    right: 51px;
+}
+
+.slick-prev {
+    left: 53px;
+}
+
+.slick-disabled {
+    .slick-arrow__icon {
+        fill: $silver-600;
+    }
+}
+
+.mixitup-control-active {
+    border-bottom: 2px solid rgba(99, 166, 14, 0.2);
+
+    &.categories__btn:focus {
+        box-shadow: 0px 0px 0px 0px $green-200;
     }
 }

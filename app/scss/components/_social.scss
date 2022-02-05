@@ -1,0 +1,36 @@
+.social {
+    display: flex;
+    align-items: start;
+
+    &__item:not(:last-child) {
+        margin-right: 12px;
+    }
+
+    &__link {
+        display: block;
+        border-radius: 3px;
+        width: 32px;
+        height: 32px;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &:focus {
+            background-color: rgba(255, 255, 255, 0.0001);
+            box-shadow: 0px 0px 0px 3px #E0EDCF;
+        }
+
+        &:active {
+            .social__icon {
+                fill: $green-200;
+            }
+        }
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        fill: $white;
+    }
+
+}

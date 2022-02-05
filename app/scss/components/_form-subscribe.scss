@@ -1,0 +1,40 @@
+.form-subscribe {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 306px;
+
+    &__text {
+        line-height: 1;
+        color: $white;
+        margin-bottom: 18px;
+        width: 100%;
+    }
+
+    &__input {
+        padding: 12px;
+        line-height: 1.15;
+        width: 181px;
+
+        &::placeholder {
+            color: #4F4F4F;
+        }
+    }
+
+    &__form-btn {
+        background-color: $green-900;
+        padding: 12px 16px;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.33;
+        letter-spacing: normal;
+
+        &:hover {
+            background-color: $green-hov;
+        }
+
+        &:focus {
+            box-shadow: 0px 0px 0px 4px $green-200;
+        }
+    }
+}

@@ -1,0 +1,220 @@
+.product-card {
+    position: relative;
+    border: 1px solid rgba(17, 17, 17, 0.2);
+    border-radius: 6px;
+    padding-top: 57px;
+    text-align: left;
+    transition: all 0.3s;
+
+    &:hover {
+        border: 1px solid $green-900;
+
+        .product-card__link {
+            &::after {
+                background-color: rgba(0, 0, 0, 0.1);
+                z-index: 0;
+            }
+
+            &::before {
+                z-index: 1;
+            }
+        }
+    }
+
+    &__badge {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        z-index: 1;
+
+        &--true {
+            top: 34px;
+        }
+    }
+
+    &__chosen-btn {
+        position: absolute;
+        right: 5px;
+        top: 10px;
+    }
+
+    &__link {
+        display: block;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url('../images/icons/icon-search-product.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 20px 20px;
+            padding: 14px;
+            width: 48px;
+            height: 48px;
+            background-color: $white;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        &--stock {
+            flex-shrink: 0;
+            max-width: 100px;
+            margin-right: 12px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 18px;
+        position: relative;
+        text-align: left;
+
+        &--stock {
+            padding: 0;
+        }
+    }
+
+    &__title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        width: 100%;
+        margin-bottom: 10px;
+        min-height: 4.2em;
+
+        &--stock {
+            margin-bottom: 7px;
+        }
+    }
+
+    &__price {
+        letter-spacing: 0.03em;
+        line-height: 1;
+        color: $dark-500;
+
+        &--stock {
+            font-weight: 600;
+            font-size: 20px;
+
+            .product-card__price-icon {
+                margin-left: -5px;
+            }
+        }
+    }
+
+    &__price-icon {
+        margin-bottom: -3px;
+        fill: $dark-500;
+    }
+
+    &__price-sale {
+        position: absolute;
+        left: 18px;
+        bottom: 36px;
+        color: $silver-600;
+        letter-spacing: 0.03em;
+        line-height: 1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 6px;
+            left: 0;
+            transform: rotate(-15deg);
+            width: 100%;
+            height: 1px;
+            background-color: $silver-600;
+        }
+
+        &--stock {
+            position: relative;
+            left: -2px;
+            bottom: 0;
+            font-size: 12px;
+
+            .product-card__icon-sale {
+                margin-bottom: -2px;
+            }
+        }
+    }
+
+    &__icon-sale {
+        margin-bottom: -3px;
+        fill: $silver-600;
+    }
+
+    &__close-icon {
+        fill: $dark-500;
+    }
+
+    &__status {
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 1;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        width: 100%;
+
+        &--in {
+            color: $green-900;
+        }
+
+        &--no {
+            color: $silver-600;
+        }
+
+        &--end {
+            color: $red-900;
+        }
+    }
+
+    &__stars {
+        font-weight: 700;
+        line-height: 1;
+        color: $dark-500;
+    }
+
+    &__stars-icon {
+        fill: $yellow-900;
+        margin-bottom: -2px;
+    }
+
+    &--stock {
+        display: flex;
+        padding: 12px;
+        background-color: $white;
+
+        &:hover {
+            .product-card__link {
+
+                &::after,
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,41 @@
+.footer {
+    background-color: $dark-800;
+    letter-spacing: normal;
+    padding-top: 30px;
+
+    &__content {
+        display: flex;
+        align-items: start;
+        margin: 30px 0 25px 0;
+    }
+
+    &__form-subscribe {
+        margin-right: 150px;
+    }
+
+    &__bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        padding: 24px 0;
+    }
+
+    &__copy {
+        color: $white;
+        margin-right: auto;
+        text-transform: uppercase;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 24px;
+    }
+
+    &__accept {
+        flex-shrink: 0;
+        fill: $white;
+    }
+
+}
