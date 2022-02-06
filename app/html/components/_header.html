@@ -3,7 +3,7 @@
         <div class="nav__top">
             <div class="container">
                 <ul class="nav__menu">
-                    <li class="nav__item">
+                    <li class="nav__item nav__item--thumb">
                         <a class="nav__link" href="#">
                             <svg class="nav__link-icon" width="32" height="22">
                                 <use xlink:href="images/sprite.svg#icon-del-address"></use>
@@ -11,7 +11,7 @@
                             Адрес и время доставки
                         </a>
                     </li>
-                    <li class="nav__item">
+                    <li class="nav__item nav__item--indent">
                         <a class="nav__link" href="#">
                             <svg class="nav__link-icon" width="22" height="22">
                                 <use xlink:href="images/sprite.svg#icon-tell"></use>
@@ -132,24 +132,55 @@
                                 </button>
                                 <ul class="products products--basket">
                                     <li class="products__item">
-                                        <article class="product product--basket">
-                                            <a class="product__link" href="#" target="_blank">
-                                                <img class="product__img" src="images/product-cards/pineapple.jpg"
-                                                    width="60" height="60" alt="Ананас">
+                                        <article class="product-card product-card--stock">
+                                            <a class="product-card__link product-card__link--stock" href="#"
+                                                target="_blank">
+                                                <img class="product-card__img"
+                                                    src="images/product-cards/pineapple-m.jpg" width="60" height="60"
+                                                    alt="ананас">
                                             </a>
-                                            <h5 class="product__title">Ананас, 1кг</h5>
-                                            <ul class="product__inner price">
-                                                <li class="price__old">999</li>
-                                                <li>
-                                                    <div class="product__counter"></div>
-                                                </li>
-                                                <li class="price__cost">1998</li>
-                                            </ul>
-                                            <button class="product__close" type="button">
-                                                <svg class="product__close-icon" width="12" height="12">
-                                                    <use xlink:href="images/sprite.svg#icon-close"></use>
-                                                </svg>
-                                            </button>
+                                            <div class="product-card__wrapper product-card__wrapper--stock">
+                                                <h3 class="product-card__title product-card__title--stock">
+                                                    Ананас, 1 кг
+                                                </h3>
+                                                <span class="product-card__price product-card__price--stock">
+                                                    999
+                                                    <svg class="product-card__price-icon" width="10" height="13">
+                                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                                    </svg>
+                                                </span>
+                                                <button class="product__close" type="button">
+                                                    <svg class="product__close-icon" width="12" height="12">
+                                                        <use xlink:href="images/sprite.svg#icon-close"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="products__item">
+                                        <article class="product-card product-card--stock">
+                                            <a class="product-card__link product-card__link--stock" href="#"
+                                                target="_blank">
+                                                <img class="product-card__img"
+                                                    src="images/product-cards/dragon-fruit.jpg" width="60" height="60"
+                                                    alt="папайя">
+                                            </a>
+                                            <div class="product-card__wrapper product-card__wrapper--stock">
+                                                <h3 class="product-card__title product-card__title--stock">
+                                                    Питахайя красная с белой мякотью, 1шт
+                                                </h3>
+                                                <span class="product-card__price product-card__price--stock">
+                                                    1019
+                                                    <svg class="product-card__price-icon" width="10" height="13">
+                                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                                    </svg>
+                                                </span>
+                                                <button class="product__close" type="button">
+                                                    <svg class="product__close-icon" width="12" height="12">
+                                                        <use xlink:href="images/sprite.svg#icon-close"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
                                         </article>
                                     </li>
                                 </ul>

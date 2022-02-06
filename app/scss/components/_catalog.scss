@@ -2,12 +2,14 @@
     &__btn {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         flex-shrink: 0;
         background-color: $white;
         border-radius: 6px;
         font-weight: 600;
         color: $green-900;
         padding: 16px 18px;
+        width: 240px;
 
         &.active {
             border-radius: 6px 6px 0px 0px;
@@ -24,11 +26,9 @@
 
     &__btn-icon {
         fill: $green-900;
-        margin-right: 19px;
     }
 
     &__btn-arrow {
-        margin-left: 10px;
         fill: $green-900;
         transition: all 0.5s;
     }
@@ -38,8 +38,7 @@
         position: absolute;
         background-color: $white;
         border-radius: 0 0 6px 6px;
-        max-width: 232px;
-        width: 100%;
+        width: 240px;
         z-index: 1;
 
         &.active {
