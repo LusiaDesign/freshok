@@ -125,8 +125,8 @@
                             <div class="basket">
                                 <span class="basket__title">Корзина</span>
                                 <button class="basket__reset" type="reset">очистить корзину</button>
-                                <button class="basket__close" type="button">
-                                    <svg class="product__close-icon" width="24" height="24">
+                                <button class="basket__close close" type="button">
+                                    <svg class="close__icon" width="24" height="24">
                                         <use xlink:href="images/sprite.svg#icon-close"></use>
                                     </svg>
                                 </button>
@@ -139,28 +139,29 @@
                                                     src="images/product-cards/pineapple-m.jpg" width="60" height="60"
                                                     alt="ананас">
                                             </a>
-                                            <div class="product-card__wrapper product-card__wrapper--stock">
-                                                <h3 class="product-card__title product-card__title--stock">
+                                            <div class="product-card__wrapper product-card__wrapper--basket">
+                                                <h3 class="product-card__title product-card__title--basket">
                                                     Ананас, 1 кг
                                                 </h3>
-                                                <span class="product-card__price product-card__price--stock">
+                                                <span class="product-card__price product-card__price--basket">
                                                     999
                                                     <svg class="currency" width="12" height="13">
                                                         <use xlink:href="images/sprite.svg#icon-rub"></use>
                                                     </svg>
                                                 </span>
                                             </div>
-                                            <form class="product-card__amount amount">
-                                                <input class="amount__number" type="number" min="0" max="99">
-                                                <span class="amount__value">
-                                                    1998
+                                            <form class="product-card__form-number form-number">
+                                                <input class="form-number__input" type="number" min="0" max="99"
+                                                    value="1">
+                                                <span class="form-number__cost">
+                                                    2038
                                                     <svg class="currency" width="10" height="13">
                                                         <use xlink:href="images/sprite.svg#icon-rub"></use>
                                                     </svg>
                                                 </span>
                                             </form>
-                                            <button class="product-card__close" type="button">
-                                                <svg class="product-card__close-icon" width="12" height="12">
+                                            <button class="product-card__close close close--card" type="button">
+                                                <svg class="close__icon" width="12" height="12">
                                                     <use xlink:href="images/sprite.svg#icon-close"></use>
                                                 </svg>
                                             </button>
@@ -174,28 +175,29 @@
                                                     src="images/product-cards/dragon-fruit.jpg" width="60" height="60"
                                                     alt="папайя">
                                             </a>
-                                            <div class="product-card__wrapper product-card__wrapper--stock">
-                                                <h3 class="product-card__title product-card__title--stock">
+                                            <div class="product-card__wrapper product-card__wrapper--basket">
+                                                <h3 class="product-card__title product-card__title--basket">
                                                     Питахайя красная с белой мякотью, 1шт
                                                 </h3>
-                                                <span class="product-card__price product-card__price--stock">
+                                                <span class="product-card__price product-card__price--basket">
                                                     1019
                                                     <svg class="currency" width="12" height="13">
                                                         <use xlink:href="images/sprite.svg#icon-rub"></use>
                                                     </svg>
                                                 </span>
                                             </div>
-                                            <form class="product-card__amount amount">
-                                                <input class="amount__number" type="number" min="0" max="99">
-                                                <span class="amount__value">
+                                            <form class="product-card__form-number form-number">
+                                                <input class="form-number__input" type="number" min="0" max="99"
+                                                    value="1">
+                                                <span class="form-number__cost">
                                                     2038
                                                     <svg class="currency" width="10" height="13">
                                                         <use xlink:href="images/sprite.svg#icon-rub"></use>
                                                     </svg>
                                                 </span>
                                             </form>
-                                            <button class="product-card__close" type="button">
-                                                <svg class="product-card__close-icon" width="12" height="12">
+                                            <button class="product-card__close close close--card" type="button">
+                                                <svg class="close__icon" width="12" height="12">
                                                     <use xlink:href="images/sprite.svg#icon-close"></use>
                                                 </svg>
                                             </button>
@@ -210,7 +212,7 @@
                                             <use xlink:href="images/sprite.svg#icon-rub"></use>
                                         </svg>
                                     </span>
-                                    <button class="basket__checkout" type="button">Оформить заказ</button>
+                                    <button class="button button--basket" type="button">Оформить заказ</button>
                                 </div>
                             </div>
                         </li>

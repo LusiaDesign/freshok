@@ -80,7 +80,6 @@
         &--basket {
             flex-shrink: 0;
             max-width: 60px;
-            margin-right: 32px;
         }
     }
 
@@ -95,6 +94,12 @@
 
         &--stock {
             padding: 0;
+        }
+
+        &--basket {
+            padding: 0;
+            max-width: 170px;
+            width: 100%;
         }
     }
 
@@ -114,14 +119,20 @@
         &--stock {
             margin-bottom: 7px;
         }
+
+        &--basket {
+            -webkit-line-clamp: 2;
+            margin-bottom: 5px;
+            min-height: 1.4em;
+        }
     }
 
     &__price {
-        letter-spacing: 0.03em;
         line-height: 1;
         color: $dark-500;
 
-        &--stock {
+        &--stock,
+        &--basket {
             font-weight: 600;
             font-size: 20px;
 
@@ -164,12 +175,9 @@
 
     &__close {
         position: absolute;
-        top: 12px;
+        top: 0;
         right: 12px;
-    }
 
-    &__close-icon {
-        fill: $dark-500;
     }
 
     &__status {
@@ -222,6 +230,8 @@
     }
 
     &--basket {
+        justify-content: space-between;
         align-items: end;
+        padding-top: 9px;
     }
 }
