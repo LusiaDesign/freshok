@@ -73,6 +73,11 @@ input[type="search"]::-webkit-search-results-decoration {
     }
 }
 
+.currency {
+    fill: currentColor;
+    margin-bottom: -2px;
+}
+
 .button {
     display: inline-block;
     font-size: 18px;
