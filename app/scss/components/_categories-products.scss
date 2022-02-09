@@ -1,6 +1,7 @@
-.categories {
+.categories-products {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 48px;
 
     &__item {

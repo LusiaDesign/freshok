@@ -1,23 +1,25 @@
-<section class="products-stock products-stock--bg section">
+<section class="products-stock section">
     <div class=" container">
         <h2 class="title">Акции</h2>
         <div data-ref="container-2">
-            <ul class="categories">
-                <li class="categories__item">
-                    <button class="categories__btn" type="button" data-filter="all">Все товары</button>
+            <ul class="categories-products">
+                <li class="categories-products__item">
+                    <button class="categories-products__btn" type="button" data-filter="all">Все товары</button>
                 </li>
-                <li class="categories__item">
-                    <button class="categories__btn" type="button" data-filter=".new">Новинки</button>
+                <li class="categories-products__item">
+                    <button class="categories-products__btn" type="button" data-filter=".new">Новинки</button>
                 </li>
-                <li class="categories__item">
-                    <button class="categories__btn" type="button" data-filter=".hits">Хиты</button>
+                <li class="categories-products__item">
+                    <button class="categories-products__btn" type="button" data-filter=".hits">Хиты</button>
                 </li>
             </ul>
-            <ul class="products-stock__products-container products-container">
-                <li class="products-container__item mix new">
+            <ul class="products-stock__container">
+                <li class="products-stock__item mix new">
                     <article class="product-card product-card--stock">
-                        <span class="product-card__badge badge badge__new-product">Новинка</span>
-                        <a class="product-card__link product-card__link--stock" href="#" target="_blank">
+                        <span class="badge">
+                            <span class="badge__item badge__item--new">Новинка</span>
+                        </span>
+                        <a class="product-card__link product-card__link--stock" href="#">
                             <img class="product-card__img" src="images/product-cards/pineapple-m.jpg" width="100"
                                 height="100" alt="Ананас">
                         </a>
@@ -25,17 +27,19 @@
                             <h3 class="product-card__title product-card__title--stock">Ананас, 1кг
                             </h3>
                             <span class="product-card__status product-card__status--in">в наличии</span>
-                            <span class="product-card__price product-card__price--stock">
-                                999
-                                <svg class="currency" width="10" height="13">
-                                    <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                </svg>
-                            </span>
-                            <span class="product-card__price-sale product-card__price-sale--stock">
-                                1999
-                                <svg class="currency" width="10" height="12">
-                                    <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                </svg>
+                            <span class="price price--stock">
+                                <span class="price__item price__item--actual">
+                                    999
+                                    <svg class="price__currency" width="10" height="14">
+                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                    </svg>
+                                </span>
+                                <span class="price__item price__item--old">
+                                    1999
+                                    <svg class="price__currency" width="10" height="14">
+                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                    </svg>
+                                </span>
                             </span>
                             <span class="product-card__stars">
                                 4.5
@@ -46,10 +50,12 @@
                         </div>
                     </article>
                 </li>
-                <li class="products-container__item mix new">
+                <li class="products-stock__item mix new">
                     <article class="product-card product-card--stock">
-                        <span class="product-card__badge badge badge__new-product">Новинка</span>
-                        <a class="product-card__link product-card__link--stock" href="#" target="_blank">
+                        <span class="badge">
+                            <span class="badge__item badge__item--new">Новинка</span>
+                        </span>
+                        <a class="product-card__link product-card__link--stock" href="#">
                             <img class="product-card__img" src="images/product-cards/coffe-m.jpg" width="100"
                                 height="100" alt="кофе">
                         </a>
@@ -58,17 +64,19 @@
                                 Caffé Salomoni 250г
                             </h3>
                             <span class="product-card__status product-card__status--end">заканчивается</span>
-                            <span class="product-card__price product-card__price--stock">
-                                777
-                                <svg class="currency" width="10" height="13">
-                                    <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                </svg>
-                            </span>
-                            <span class="product-card__price-sale product-card__price-sale--stock">
-                                877
-                                <svg class="currency" width="10" height="12">
-                                    <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                </svg>
+                            <span class="price price--stock">
+                                <span class="price__item price__item--actual">
+                                    777
+                                    <svg class="price__currency" width="10" height="14">
+                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                    </svg>
+                                </span>
+                                <span class="price__item price__item--old">
+                                    877
+                                    <svg class="price__currency" width="10" height="14">
+                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                    </svg>
+                                </span>
                             </span>
                             <span class="product-card__stars">
                                 4.9
@@ -79,10 +87,12 @@
                         </div>
                     </article>
                 </li>
-                <li class="products-container__item mix new">
+                <li class="products-stock__item mix new">
                     <article class="product-card product-card--stock">
-                        <span class="product-card__badge badge badge__new-product">Новинка</span>
-                        <a class="product-card__link product-card__link--stock" href="#" target="_blank">
+                        <span class="badge">
+                            <span class="badge__item badge__item--new">Новинка</span>
+                        </span>
+                        <a class="product-card__link product-card__link--stock" href="#">
                             <img class="product-card__img" src="images/product-cards/strawberry-m.jpg" width="100"
                                 height="100" alt="клубника">
                         </a>
@@ -90,17 +100,19 @@
                             <h3 class="product-card__title product-card__title--stock">Клубника, 1 кг
                             </h3>
                             <span class="product-card__status product-card__status--no">нет в наличии</span>
-                            <span class="product-card__price product-card__price--stock">
-                                440
-                                <svg class="currency" width="10" height="13">
-                                    <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                </svg>
-                            </span>
-                            <span class="product-card__price-sale product-card__price-sale--stock">
-                                600
-                                <svg class="currency" width="10" height="12">
-                                    <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                </svg>
+                            <span class="price price--stock">
+                                <span class="price__item price__item--actual">
+                                    440
+                                    <svg class="price__currency" width="10" height="14">
+                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                    </svg>
+                                </span>
+                                <span class="price__item price__item--old">
+                                    600
+                                    <svg class="price__currency" width="10" height="14">
+                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                    </svg>
+                                </span>
                             </span>
                             <span class="product-card__stars">
                                 5.0
@@ -111,10 +123,12 @@
                         </div>
                     </article>
                 </li>
-                <li class="products-container__item mix new">
+                <li class="products-stock__item mix new">
                     <article class="product-card product-card--stock">
-                        <span class="product-card__badge badge badge__new-product">Новинка</span>
-                        <a class="product-card__link product-card__link--stock" href="#" target="_blank">
+                        <span class="badge">
+                            <span class="badge__item badge__item--new">Новинка</span>
+                        </span>
+                        <a class="product-card__link product-card__link--stock" href="#">
                             <img class="product-card__img" src="images/product-cards/mango-m.jpg" width="100"
                                 height="100" alt="манго">
                         </a>
@@ -122,17 +136,19 @@
                             <h3 class="product-card__title product-card__title--stock">Манго, 1 кг
                             </h3>
                             <span class="product-card__status product-card__status--in">в наличии</span>
-                            <span class="product-card__price product-card__price--stock">
-                                660
-                                <svg class="currency" width="10" height="13">
-                                    <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                </svg>
-                            </span>
-                            <span class="product-card__price-sale product-card__price-sale--stock">
-                                960
-                                <svg class="currency" width="10" height="12">
-                                    <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                </svg>
+                            <span class="price price--stock">
+                                <span class="price__item price__item--actual">
+                                    660
+                                    <svg class="price__currency" width="10" height="14">
+                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                    </svg>
+                                </span>
+                                <span class="price__item price__item--old">
+                                    960
+                                    <svg class="price__currency" width="10" height="14">
+                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                    </svg>
+                                </span>
                             </span>
                             <span class="product-card__stars">
                                 5.0
@@ -143,10 +159,12 @@
                         </div>
                     </article>
                 </li>
-                <li class="products-container__item mix new">
+                <li class="products-stock__item mix new">
                     <article class="product-card product-card--stock">
-                        <span class="product-card__badge badge badge__new-product">Новинка</span>
-                        <a class="product-card__link product-card__link--stock" href="#" target="_blank">
+                        <span class="badge">
+                            <span class="badge__item badge__item--new">Новинка</span>
+                        </span>
+                        <a class="product-card__link product-card__link--stock" href="#">
                             <img class="product-card__img" src="images/product-cards/fish-m.jpg" width="100"
                                 height="100" alt="лосось">
                         </a>
@@ -154,17 +172,19 @@
                             <h3 class="product-card__title product-card__title--stock">Лосось, 1 кг
                             </h3>
                             <span class="product-card__status product-card__status--in">в наличии</span>
-                            <span class="product-card__price product-card__price--stock">
-                                999
-                                <svg class="currency" width="10" height="13">
-                                    <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                </svg>
-                            </span>
-                            <span class="product-card__price-sale product-card__price-sale--stock">
-                                1199
-                                <svg class="currency" width="10" height="12">
-                                    <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                </svg>
+                            <span class="price price--stock">
+                                <span class="price__item price__item--actual">
+                                    999
+                                    <svg class="price__currency" width="10" height="14">
+                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                    </svg>
+                                </span>
+                                <span class="price__item price__item--old">
+                                    1199
+                                    <svg class="price__currency" width="10" height="14">
+                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                    </svg>
+                                </span>
                             </span>
                             <span class="product-card__stars">
                                 4.5
@@ -175,10 +195,12 @@
                         </div>
                     </article>
                 </li>
-                <li class="products-container__item mix hits">
+                <li class="products-stock__item mix hits">
                     <article class="product-card product-card--stock">
-                        <span class="product-card__badge badge badge__hit-product">Хит</span>
-                        <a class="product-card__link product-card__link--stock" href="#" target="_blank">
+                        <span class="badge">
+                            <span class="badge__item badge__item--hit">хит</span>
+                        </span>
+                        <a class="product-card__link product-card__link--stock" href="#">
                             <img class="product-card__img" src="images/product-cards/juice-m.jpg" width="100"
                                 height="100" alt="сок">
                         </a>
@@ -186,17 +208,19 @@
                             <h3 class="product-card__title product-card__title--stock">Сок Granini овощной 100%, 0.5л
                             </h3>
                             <span class="product-card__status product-card__status--end">заканчивается</span>
-                            <span class="product-card__price product-card__price--stock">
-                                180
-                                <svg class="currency" width="10" height="13">
-                                    <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                </svg>
-                            </span>
-                            <span class="product-card__price-sale product-card__price-sale--stock">
-                                230
-                                <svg class="currency" width="10" height="12">
-                                    <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                </svg>
+                            <span class="price price--stock">
+                                <span class="price__item price__item--actual">
+                                    180
+                                    <svg class="price__currency" width="10" height="14">
+                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                    </svg>
+                                </span>
+                                <span class="price__item price__item--old">
+                                    230
+                                    <svg class="price__currency" width="10" height="14">
+                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                    </svg>
+                                </span>
                             </span>
                             <span class="product-card__stars">
                                 4.9
@@ -207,10 +231,12 @@
                         </div>
                     </article>
                 </li>
-                <li class="products-container__item mix hits">
+                <li class="products-stock__item mix hits">
                     <article class="product-card product-card--stock">
-                        <span class="product-card__badge badge badge__hit-product">Хит</span>
-                        <a class="product-card__link product-card__link--stock" href="#" target="_blank">
+                        <span class="badge">
+                            <span class="badge__item badge__item--hit">хит</span>
+                        </span>
+                        <a class="product-card__link product-card__link--stock" href="#">
                             <img class="product-card__img" src="images/product-cards/fruit-m.jpg" width="100"
                                 height="100" alt="корзина фруктов">
                         </a>
@@ -218,17 +244,19 @@
                             <h3 class="product-card__title product-card__title--stock">Фруктовая корзина, 1 шт
                             </h3>
                             <span class="product-card__status product-card__status--in">в наличии</span>
-                            <span class="product-card__price product-card__price--stock">
-                                3990
-                                <svg class="currency" width="10" height="13">
-                                    <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                </svg>
-                            </span>
-                            <span class="product-card__price-sale product-card__price-sale--stock">
-                                5990
-                                <svg class="currency" width="10" height="12">
-                                    <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                </svg>
+                            <span class="price price--stock">
+                                <span class="price__item price__item--actual">
+                                    3990
+                                    <svg class="price__currency" width="10" height="14">
+                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                    </svg>
+                                </span>
+                                <span class="price__item price__item--old">
+                                    5990
+                                    <svg class="price__currency" width="10" height="14">
+                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                    </svg>
+                                </span>
                             </span>
                             <span class="product-card__stars">
                                 4.8
@@ -239,10 +267,12 @@
                         </div>
                     </article>
                 </li>
-                <li class="products-container__item mix hits">
+                <li class="products-stock__item mix hits">
                     <article class="product-card product-card--stock">
-                        <span class="product-card__badge badge badge__hit-product">Хит</span>
-                        <a class="product-card__link product-card__link--stock" href="#" target="_blank">
+                        <span class="badge">
+                            <span class="badge__item badge__item--hit">хит</span>
+                        </span>
+                        <a class="product-card__link product-card__link--stock" href="#">
                             <img class="product-card__img" src="images/product-cards/meat-m.jpg" width="100"
                                 height="100" alt="мясо свинина">
                         </a>
@@ -250,17 +280,19 @@
                             <h3 class="product-card__title product-card__title--stock">Свинина мякоть, 1 кг
                             </h3>
                             <span class="product-card__status product-card__status--in">в наличии</span>
-                            <span class="product-card__price product-card__price--stock">
-                                499
-                                <svg class="currency" width="10" height="13">
-                                    <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                </svg>
-                            </span>
-                            <span class="product-card__price-sale product-card__price-sale--stock">
-                                599
-                                <svg class="currency" width="10" height="12">
-                                    <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                </svg>
+                            <span class="price price--stock">
+                                <span class="price__item price__item--actual">
+                                    999
+                                    <svg class="price__currency" width="10" height="14">
+                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                    </svg>
+                                </span>
+                                <span class="price__item price__item--old">
+                                    1999
+                                    <svg class="price__currency" width="10" height="14">
+                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                    </svg>
+                                </span>
                             </span>
                             <span class="product-card__stars">
                                 4.6

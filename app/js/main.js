@@ -2,26 +2,38 @@ $(function () {
     $('.catalog__btn').on('click', function () {
         $('.catalog__btn, .catalog__dropdown').toggleClass('active');
     });
-    $('.user-btn--basket').on('click', function () {
+    $('.basket-btn--nav').on('click', function () {
         $('.basket').toggleClass('active');
+        $('body').toggleClass('no-scroll');
+
     });
-    $('.basket__close').on('click', function () {
+    $('.basket__close-btn').on('click', function () {
         $('.basket').removeClass('active');
+        $('body').removeClass('no-scroll');
     });
+
     $(document).mouseup(function (e) {
         var block = $(".catalog, .basket");
         if (!block.is(e.target) &&
             block.has(e.target).length === 0) {
             $('.catalog__btn, .catalog__dropdown, .basket').removeClass('active');
+            $('body').removeClass('no-scroll');
         }
     });
     $('.banner__wrapper').slick({
-        prevArrow: '<button type="button" class="slick-arrow slick-prev"><span class="sr-only">Предыдущий слайд</span><svg class="slick-arrow__icon" width="19" height="32"><use xlink: href="../images/sprite.svg#icon-arrow-left"></use></svg></button>',
-        nextArrow: '<button type="button" class="slick-arrow slick-next"><span class="sr-only">Следующий слайд</span><svg class="slick-arrow__icon" width="19" height="32"><use xlink: href="../images/sprite.svg#icon-arrow-next"></use></svg></button>',
+        prevArrow: '<button type="button" class="slick-arrow slick-prev"><span class="sr-only">Предыдущий слайд</span><svg width="19" height="32"><use xlink: href="../images/sprite.svg#icon-arrow-left"></use></svg></button>',
+        nextArrow: '<button type="button" class="slick-arrow slick-next"><span class="sr-only">Следующий слайд</span><svg width="19" height="32"><use xlink: href="../images/sprite.svg#icon-arrow-next"></use></svg></button>',
         infinite: false,
         fade: true,
     });
-    $('.form-number__input').styler();
+    $('.brands__wrapper').slick({
+        autoplay: true,
+        speed: 1000,
+        arrows: false,
+        slidesToShow: 6,
+        slidesToScroll: 1
+    });
+    $('.product-card__input').styler();
 
     var containerEl1 = document.querySelector('[data-ref="container-1"]');
     var containerEl2 = document.querySelector('[data-ref="container-2"]');

@@ -3,25 +3,34 @@
 @import 'libs';
 @import 'vars';
 @import 'global';
-@import 'components/nav';
+
+@import 'section/nav';
+@import 'section/banner';
+@import 'section/products-top';
+@import 'section/promotion';
+@import 'section/products-stock';
+@import 'section/news';
+
+@import 'components/buttons/user-btn';
+@import 'components/buttons/form-btn';
+@import 'components/buttons/chosen-btn';
+@import 'components/buttons/basket-btn';
+@import 'components/buttons/close-btn';
+@import 'components/buttons/button';
+
+@import 'components/basket';
 @import 'components/catalog';
 @import 'components/search';
-@import 'components/basket';
-@import 'components/form-number';
-@import 'components/banner';
 @import 'components/advantages';
-@import 'components/products-top';
-@import 'components/categories';
-@import 'components/products-container';
+@import 'components/price';
+@import 'components/categories-products';
 @import 'components/product-card';
-@import 'components/promotion-content';
-@import 'components/promotion';
+@import 'components/badge';
+@import 'components/promotion-card';
 @import 'components/brands';
-@import 'components/news';
-@import 'components/preview';
-@import 'components/meta';
-@import 'components/footer';
-@import 'components/form-subscribe';
-@import 'components/footer-nav';
-@import 'components/connection';
-@import 'components/social';
+@import 'components/news-card';
+
+@import 'footer/footer';
+@import 'footer/form-subscribe';
+@import 'footer/connection';
+@import 'footer/social';

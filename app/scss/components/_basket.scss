@@ -9,19 +9,18 @@
     width: 100%;
     background-color: $white;
     padding-top: 19px;
-    font-size: 24px;
-    line-height: 1.2;
-    color: #000;
-
 
     &.active {
         display: block;
     }
 
     &__title {
-        display: block;
         margin-left: 24px;
         margin-bottom: 12px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.2;
+        color: #000;
     }
 
     &__reset {
@@ -46,10 +45,22 @@
         }
     }
 
-    &__close {
-        position: absolute;
+    &__close-btn {
         top: 33px;
         right: 26px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        overflow-y: auto;
+        height: calc(100vh - 235px);
+        background-color: $silver-100;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 12px;
     }
 
     &__bottom {
@@ -61,16 +72,25 @@
         left: 0;
         right: 0;
         bottom: 0;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1.2;
         background-color: $white;
     }
 
     &__text {
         padding: 24px;
+        color: #000;
     }
 
     &__total {
         font-weight: 600;
         padding: 24px;
         color: $dark-500;
+    }
+
+    &__total-currency {
+        margin-bottom: -2px;
+        margin-left: -8px;
     }
 }

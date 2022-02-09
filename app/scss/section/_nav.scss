@@ -10,7 +10,6 @@
     }
 
     &__item {
-        color: $white;
         margin-right: 24px;
 
         &:last-child {
@@ -31,6 +30,7 @@
         font-size: 13px;
         line-height: 1.1;
         font-weight: 700;
+        color: $white;
         text-transform: uppercase;
         border-radius: 3px;
 
@@ -50,7 +50,6 @@
     &__link-icon {
         margin-right: 10px;
         margin-bottom: -5px;
-        fill: $white;
     }
 
     &__bottom {

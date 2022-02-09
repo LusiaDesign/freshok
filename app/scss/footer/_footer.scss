@@ -6,11 +6,23 @@
     &__content {
         display: flex;
         align-items: start;
+        justify-content: space-between;
         margin: 30px 0 25px 0;
     }
 
-    &__form-subscribe {
-        margin-right: 150px;
+    &__item {
+        margin-bottom: 18px;
+    }
+
+    &__link {
+        display: block;
+        color: $white;
+    }
+
+    &__list {
+        column-count: 3;
+        column-gap: 75px;
+        margin-right: -75px;
     }
 
     &__bottom {
@@ -21,21 +33,15 @@
         display: flex;
         align-items: center;
         padding: 24px 0;
+        color: $white;
     }
 
     &__copy {
-        color: $white;
         margin-right: auto;
         text-transform: uppercase;
     }
 
-    &__item:not(:last-child) {
+    &__thumb:not(:last-child) {
         margin-right: 24px;
     }
-
-    &__accept {
-        flex-shrink: 0;
-        fill: $white;
-    }
-
 }

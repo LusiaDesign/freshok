@@ -1,0 +1,41 @@
+.chosen-btn {
+    width: 44px;
+    height: 44px;
+    padding: 8px 6px;
+    border-radius: 3px;
+    color: $silver-600;
+
+    &:hover {
+        color: $yellow-900;
+    }
+
+    &:focus {
+        box-shadow: 0px 0px 0px 3px $green-200;
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+
+    &--nav {
+        position: relative;
+        padding: 7px;
+        background-color: transparent;
+        color: $white;
+
+        &:hover {
+            color: $white;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        &:focus {
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0px 0px 0px 3px $green-100;
+        }
+
+        &:active {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+}

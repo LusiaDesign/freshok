@@ -14,7 +14,7 @@
         &.active {
             border-radius: 6px 6px 0px 0px;
 
-            .catalog__btn-arrow {
+            .catalog__arrow {
                 transform: rotate(180deg);
             }
         }
@@ -24,12 +24,7 @@
         }
     }
 
-    &__btn-icon {
-        fill: $green-900;
-    }
-
-    &__btn-arrow {
-        fill: $green-900;
+    &__arrow {
         transition: all 0.5s;
     }
 

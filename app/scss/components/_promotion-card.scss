@@ -1,25 +1,25 @@
-.promotion {
+.promotion-card {
     @extend %bg;
     color: $dark-500;
+    max-width: 23%;
     width: 100%;
     padding: 76px 32px;
     border-radius: 6px;
     letter-spacing: normal;
     text-transform: uppercase;
 
-    &--light {
-        color: $white;
-        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+    &--big {
+        max-width: 49%;
 
-        .promotion__link {
-            border-bottom-color: $white;
-
-            &:hover {
-                filter: invert(50%);
-            }
+        .promotion-card__title {
+            max-width: 346px;
         }
     }
 
+    &--light {
+        color: $white;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+    }
 
     &__text {
         display: block;
@@ -38,16 +38,11 @@
         max-width: 88%;
     }
 
-    &__title-icon {
-        fill: $white;
-        margin-bottom: -6px;
-    }
-
     &__link {
         font-weight: 700;
         line-height: 1;
         padding-bottom: 4px;
-        border-bottom: 2px solid $dark-500;
+        border-bottom: 2px solid currentColor;
 
         &:hover {
             filter: invert(80%);

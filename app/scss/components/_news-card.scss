@@ -1,0 +1,45 @@
+.news-card {
+    position: relative;
+
+    &__meta {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        text-align: center;
+        padding-bottom: 10px;
+        width: 65px;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 1;
+        background-color: $white;
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    &__month {
+        width: 100%;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 10px;
+        letter-spacing: 0.1em;
+    }
+
+    &__title {
+        overflow-y: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        letter-spacing: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.5;
+        min-height: 4.5em;
+        margin: 18px;
+    }
+
+    &:hover {
+        .news-card__title {
+            color: $green-900;
+        }
+    }
+}

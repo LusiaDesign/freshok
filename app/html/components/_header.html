@@ -35,16 +35,15 @@
             <div class="container">
                 <div class="nav__inner">
                     <a class="nav__logo logo" href="#">
-                        <img class="logo__img" src="images/logo.svg" width="200" height="60"
-                            alt="Логотип магазина Фрешок">
+                        <img src="images/logo.svg" width="200" height="60" alt="Логотип магазина Фрешок">
                     </a>
                     <div class="catalog">
                         <button class="catalog__btn" type="button">
-                            <svg class="catalog__btn-icon" width="25" height="17">
+                            <svg width="25" height="17">
                                 <use xlink:href="images/sprite.svg#icon-btn"></use>
                             </svg>
                             Каталог продуктов
-                            <svg class="catalog__btn-arrow" width="9" height="4">
+                            <svg class="catalog__arrow" width="9" height="4">
                                 <use xlink:href="images/sprite.svg#icon-catalog-arrow"></use>
                             </svg>
                         </button>
@@ -90,7 +89,7 @@
                     <form class="search" action="#">
                         <label class="search__label">
                             <span class="sr-only">ввести поиск товаров</span>
-                            <input class="search__input input" type="search" name="search"
+                            <input class="search__input input-look" type="search" name="search"
                                 placeholder="Найти в магазине..."
                                 style="background-image: url('images/icon-search.svg');" required>
                         </label>
@@ -100,104 +99,115 @@
                         <li class="nav__items">
                             <button class="user-btn" type="button">
                                 <span class="sr-only">вход в личный кабинет</span>
-                                <svg class="user-btn__icon" width="32" height="32">
+                                <svg width="32" height="32">
                                     <use xlink:href="images/sprite.svg#icon-user"></use>
                                 </svg>
                             </button>
                         </li>
                         <li class="nav__items">
-                            <button class="user-btn" type="button">
+                            <button class="chosen-btn chosen-btn--nav" type="button">
                                 <span class="sr-only">избранные товары</span>
-                                <svg class="user-btn__icon" width="32" height="32">
+                                <svg width="32" height="32">
                                     <use xlink:href="images/sprite.svg#icon-heart"></use>
                                 </svg>
-                                <span class="user-btn__counter">12</span>
+                                <span class="counter">12</span>
                             </button>
                         </li>
                         <li class="nav__items">
-                            <button class="user-btn user-btn--basket" type="button">
+                            <button class="basket-btn basket-btn--nav" type="button">
                                 <span class="sr-only">корзина товаров</span>
-                                <svg class="user-btn__icon" width="32" height="32">
+                                <svg width="32" height="32">
                                     <use xlink:href="images/sprite.svg#icon-basket"></use>
                                 </svg>
-                                <span class="user-btn__counter">12</span>
+                                <span class="counter">12</span>
                             </button>
                             <div class="basket">
-                                <span class="basket__title">Корзина</span>
-                                <button class="basket__reset" type="reset">очистить корзину</button>
-                                <button class="basket__close close" type="button">
-                                    <svg class="close__icon" width="24" height="24">
+                                <h2 class="basket__title">Корзина</h2>
+                                <button class="basket__reset" type="button">очистить корзину</button>
+                                <button class="basket__close-btn close-btn" type="button">
+                                    <span class="sr-only">закрыть корзину</span>
+                                    <svg width="24" height="24">
                                         <use xlink:href="images/sprite.svg#icon-close"></use>
                                     </svg>
                                 </button>
-                                <ul class="products-container products-container--basket">
-                                    <li class="products-container__item">
+                                <ul class="basket__container">
+                                    <li class="basket__item">
                                         <article class="product-card product-card--basket">
-                                            <a class="product-card__link product-card__link--basket" href="#"
-                                                target="_blank">
+                                            <a class="product-card__link--basket" href="#" target="_blank">
                                                 <img class="product-card__img"
                                                     src="images/product-cards/pineapple-m.jpg" width="60" height="60"
                                                     alt="ананас">
                                             </a>
-                                            <div class="product-card__wrapper product-card__wrapper--basket">
+                                            <div class="product-card__inner">
                                                 <h3 class="product-card__title product-card__title--basket">
                                                     Ананас, 1 кг
                                                 </h3>
-                                                <span class="product-card__price product-card__price--basket">
-                                                    999
-                                                    <svg class="currency" width="12" height="13">
-                                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                                    </svg>
+                                                <span class="price">
+                                                    <span class="price__item price__item--actual">
+                                                        999
+                                                        <svg class="price__currency" width="10" height="14">
+                                                            <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                                        </svg>
+                                                    </span>
                                                 </span>
                                             </div>
-                                            <form class="product-card__form-number form-number">
-                                                <input class="form-number__input" type="number" min="0" max="99"
-                                                    value="1">
-                                                <span class="form-number__cost">
+                                            <form class="product-card__amount">
+                                                <label class="product-card__label">
+                                                    <span class="sr-only">количество штук</span>
+                                                    <input class="product-card__input" type="number" name="number"
+                                                        min="0" max="99" value="1">
+                                                </label>
+                                                <span class="product-card__cost">
                                                     2038
-                                                    <svg class="currency" width="10" height="13">
+                                                    <svg class="product-card__cost-currency" width="10" height="13">
                                                         <use xlink:href="images/sprite.svg#icon-rub"></use>
                                                     </svg>
                                                 </span>
                                             </form>
-                                            <button class="product-card__close close close--card" type="button">
-                                                <svg class="close__icon" width="12" height="12">
+                                            <button class="product-card__close-btn close-btn" type="button">
+                                                <span class="sr-only">удалить из корзины</span>
+                                                <svg width="12" height="12">
                                                     <use xlink:href="images/sprite.svg#icon-close"></use>
                                                 </svg>
                                             </button>
                                         </article>
                                     </li>
-                                    <li class="products-container__item">
+                                    <li class="basket__item">
                                         <article class="product-card product-card--basket">
-                                            <a class="product-card__link product-card__link--basket" href="#"
-                                                target="_blank">
+                                            <a class="product-card__link--basket" href="#" target="_blank">
                                                 <img class="product-card__img"
                                                     src="images/product-cards/dragon-fruit.jpg" width="60" height="60"
                                                     alt="папайя">
                                             </a>
-                                            <div class="product-card__wrapper product-card__wrapper--basket">
+                                            <div class="product-card__inner">
                                                 <h3 class="product-card__title product-card__title--basket">
                                                     Питахайя красная с белой мякотью, 1шт
                                                 </h3>
-                                                <span class="product-card__price product-card__price--basket">
-                                                    1019
-                                                    <svg class="currency" width="12" height="13">
-                                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                                    </svg>
+                                                <span class="price">
+                                                    <span class="price__item price__item--actual">
+                                                        1019
+                                                        <svg class="price__currency" width="10" height="14">
+                                                            <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                                        </svg>
+                                                    </span>
                                                 </span>
                                             </div>
-                                            <form class="product-card__form-number form-number">
-                                                <input class="form-number__input" type="number" min="0" max="99"
-                                                    value="1">
-                                                <span class="form-number__cost">
+                                            <form class="product-card__amount">
+                                                <label class="product-card__label">
+                                                    <span class="sr-only">количество штук</span>
+                                                    <input class="product-card__input" type="number" name="number"
+                                                        min="0" max="99" value="1">
+                                                </label>
+                                                <span class="product-card__cost">
                                                     2038
-                                                    <svg class="currency" width="10" height="13">
+                                                    <svg class="product-card__cost-currency" width="10" height="13">
                                                         <use xlink:href="images/sprite.svg#icon-rub"></use>
                                                     </svg>
                                                 </span>
                                             </form>
-                                            <button class="product-card__close close close--card" type="button">
-                                                <svg class="close__icon" width="12" height="12">
+                                            <button class="product-card__close-btn close-btn" type="button">
+                                                <span class="sr-only">удалить из корзины</span>
+                                                <svg width="12" height="12">
                                                     <use xlink:href="images/sprite.svg#icon-close"></use>
                                                 </svg>
                                             </button>
@@ -208,11 +218,11 @@
                                     <span class="basket__text">Товаров на сумму</span>
                                     <span class="basket__total">
                                         2038
-                                        <svg class="currency" width="14" height="15">
+                                        <svg class="basket__total-currency" width="14" height="15">
                                             <use xlink:href="images/sprite.svg#icon-rub"></use>
                                         </svg>
                                     </span>
-                                    <button class="button button--basket" type="button">Оформить заказ</button>
+                                    <a class="button button--basket" href="#">Оформить заказ</a>
                                 </div>
                             </div>
                         </li>

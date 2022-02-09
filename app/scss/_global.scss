@@ -13,6 +13,7 @@ body {
     letter-spacing: 0.03em;
     color: $color-body;
     background-color: $white;
+    margin: 0;
 }
 
 button,
@@ -27,6 +28,16 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
     margin-left: 20px;
 }
+
+svg {
+    fill: currentColor;
+}
+
+.no-scroll {
+    overflow: hidden;
+    margin-right: calc(100vw - 100%);
+}
+
 
 .sr-only {
     position: absolute;
@@ -55,7 +66,15 @@ input[type="search"]::-webkit-search-results-decoration {
     flex-grow: 1;
 }
 
-.input {
+.title {
+    font-family: 'Ruda', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.input-look {
     background-color: $white;
     border-radius: 6px 0 0 6px;
 
@@ -67,230 +86,19 @@ input[type="search"]::-webkit-search-results-decoration {
         outline: 1px solid #63A60E;
         box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
     }
-
-    &:active {
-        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
 }
 
-.currency {
-    fill: currentColor;
-    margin-bottom: -2px;
-}
-
-.button {
-    display: inline-block;
-    font-size: 18px;
-    line-height: 1.3;
-    padding: 12px 24px;
-    border-radius: 6px;
-    background-color: $green-900;
-    border: 1px solid transparent;
-    color: $white;
-
-    &:hover {
-        background-color: $green-hov;
-    }
-
-    &:focus {
-        box-shadow: 0px 0px 0px 4px $green-200;
-    }
-
-    &:active {
-        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-
-    &--light {
-        background-color: $white;
-        border: 1px solid $green-900;
-        color: $green-900;
-
-        &:hover {
-            background-color: $green-100;
-        }
-
-        &:active {
-            opacity: 0.5;
-            box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
-        }
-    }
-
-    &--basket {
-        width: 100%;
-        text-align: center;
-        padding: 23px 0;
-        border-radius: 0;
-    }
-}
-
-.form-btn {
-    color: $white;
-    text-transform: uppercase;
-    border-radius: 0px 6px 6px 0px;
-
-    &:active {
-        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-}
-
-.close {
-    display: block;
-    width: 40px;
-    height: 40px;
-    padding: 8px;
-    border-radius: 3px;
-    fill: $dark-800;
-
-    &--card {
-        width: 24px;
-        height: 24px;
-        padding: 1px;
-
-        .close__icon {
-            fill: $silver-600;
-        }
-    }
-
-    &:hover {
-        background-color: $green-100;
-
-        .close__icon {
-            fill: $green-900;
-        }
-    }
-
-    &:focus {
-        box-shadow: 0px 0px 0px 3px $green-200;
-    }
-
-    &:active {
-        background-color: rgba(193, 193, 193, 0.3);
-    }
-}
-
-.title {
-    font-family: 'Ruda', sans-serif;
+.counter {
+    position: absolute;
+    top: 3px;
+    left: 1px;
+    background-color: $white;
+    border-radius: 50%;
+    color: $red-900;
     font-weight: 600;
-    font-size: 32px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-
-.badge {
-    display: block;
-    font-weight: 700;
     font-size: 10px;
     line-height: 1;
-    color: $white;
-    text-transform: uppercase;
-    padding: 3px 6px;
-    border-radius: 6px;
-
-    &__new-product {
-        background-color: $green-900;
-    }
-
-    &__hit-product {
-        background-color: $orange-900;
-    }
-
-    &__sale-product {
-        background-color: $red-900;
-    }
-
-}
-
-.chosen-btn,
-.basket-btn {
-    &:focus {
-        box-shadow: 0px 0px 0px 3px $green-200;
-    }
-}
-
-.chosen-btn {
-    width: 44px;
-    height: 44px;
-    padding: 8px 6px;
-    border-radius: 3px;
-
-    &__chosen-icon {
-        fill: $silver-600;
-    }
-
-    &:hover {
-        .chosen-btn__chosen-icon {
-            fill: $yellow-900;
-        }
-    }
-
-    &:active {
-        opacity: 0.5;
-    }
-}
-
-.basket-btn {
-    background-color: $green-900;
-    border-radius: 3px;
-    width: 32px;
-    height: 32px;
-    padding: 8px;
-
-    &__basket-icon {
-        fill: $white;
-    }
-
-    &:hover {
-        background-color: $green-hov;
-    }
-
-    &:active {
-        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-        .basket-btn__basket-icon {
-            opacity: 0.5;
-        }
-    }
-}
-
-.user-btn {
-    position: relative;
-    padding: 7px 9px;
-    border-radius: 3px;
-    background-color: transparent;
-
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    &:focus {
-        background-color: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 3px $green-100;
-    }
-
-    &:active {
-        background-color: rgba(255, 255, 255, 0.1);
-
-        .user-btn__icon {
-            fill: rgba(255, 255, 255, 0.5);
-        }
-    }
-
-    &__icon {
-        fill: $white;
-    }
-
-    &__counter {
-        position: absolute;
-        top: 3px;
-        left: 1px;
-        background-color: $white;
-        border-radius: 50%;
-        color: $red-900;
-        font-weight: 600;
-        font-size: 10px;
-        line-height: 1;
-        padding: 3px 4px;
-    }
+    padding: 3px 4px;
 }
 
 .slick-arrow {
@@ -303,32 +111,20 @@ input[type="search"]::-webkit-search-results-decoration {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 6px;
     z-index: 1;
-
-    &__icon {
-        flex-shrink: 0;
-        fill: $dark-500;
-    }
+    color: $dark-500;
 
     &:hover {
         background-color: $green-200;
-
-        .slick-arrow__icon {
-            fill: $green-900;
-        }
+        color: $green-900;
     }
 
     &:focus {
         box-shadow: 0px 0px 0px 3px rgba(99, 166, 14, 0.5);
-
-        .slick-arrow__icon {
-            fill: #5a5a5a;
-        }
+        color: #5a5a5a;
     }
 
     &:active {
-        .slick-arrow__icon {
-            fill: $green-900;
-        }
+        color: $green-900;
     }
 }
 
@@ -390,7 +186,6 @@ input[type="search"]::-webkit-search-results-decoration {
 
     &:focus {
         box-shadow: 0px 0px 0px 4px $green-200;
-
     }
 
     &:active {
@@ -407,9 +202,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .slick-disabled {
-    .slick-arrow__icon {
-        fill: $silver-600;
-    }
+    color: $silver-600;
 }
 
 .mixitup-control-active {

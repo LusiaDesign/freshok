@@ -1,0 +1,53 @@
+.price {
+    &--top {
+        max-width: 60px;
+    }
+
+    &--stock {
+        .price__item {
+            &:not(:last-child) {
+                margin-right: 12px;
+            }
+
+            &--old {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__item {
+        color: $dark-500;
+        line-height: 1;
+
+        &--old {
+            position: relative;
+            color: $silver-600;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 6px;
+                left: 0;
+                transform: rotate(-15deg);
+                width: 100%;
+                height: 1px;
+                background-color: currentColor;
+            }
+        }
+
+        &--actual {
+            font-weight: 600;
+            font-size: 20px;
+
+            .price__currency {
+                margin-bottom: -2px;
+                margin-left: -6px;
+            }
+        }
+    }
+
+    &__currency {
+        margin-bottom: -3px;
+        margin-left: -2px;
+    }
+}
