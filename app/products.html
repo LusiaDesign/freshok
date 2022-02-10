@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет магазин продуктов ФрешОк | Главная страница</title>
+
+    <link rel="icon" href="images/Favicon.svg" sizes="16x16" type="images/x-icon" />
+    <link rel="shortcut icon" href="images/Favicon.svg" sizes="16x16" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+<header class="header">
+    <nav class="nav">
+        <div class="nav__top">
+            <div class="container">
+                <ul class="nav__menu">
+                    <li class="nav__item nav__item--thumb">
+                        <a class="nav__link" href="#">
+                            <svg class="nav__link-icon" width="32" height="22">
+                                <use xlink:href="images/sprite.svg#icon-del-address"></use>
+                            </svg>
+                            Адрес и время доставки
+                        </a>
+                    </li>
+                    <li class="nav__item nav__item--indent">
+                        <a class="nav__link" href="#">
+                            <svg class="nav__link-icon" width="22" height="22">
+                                <use xlink:href="images/sprite.svg#icon-tell"></use>
+                            </svg>
+                            Горячая линия 24/7
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#">Доставка</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#">О нас</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#">Новости</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav__bottom">
+            <div class="container">
+                <div class="nav__inner">
+                    <a class="nav__logo logo" href="#">
+                        <img src="images/logo.svg" width="200" height="60" alt="Логотип магазина Фрешок">
+                    </a>
+                    <div class="catalog">
+                        <button class="catalog__btn" type="button">
+                            <svg width="25" height="17">
+                                <use xlink:href="images/sprite.svg#icon-btn"></use>
+                            </svg>
+                            Каталог продуктов
+                            <svg class="catalog__arrow" width="9" height="4">
+                                <use xlink:href="images/sprite.svg#icon-catalog-arrow"></use>
+                            </svg>
+                        </button>
+                        <ul class="catalog__dropdown">
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">Овощи и фрукты</a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">Бакалея</a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">Молочные продукты</a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">Хлеб</a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">Мясо</a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">Колбаса</a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">Рыба</a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">Алкоголь</a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">Напитки</a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">Торты</a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">Мясо</a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">Чай, кофе</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <form class="search" action="#">
+                        <label class="search__label">
+                            <span class="sr-only">ввести поиск товаров</span>
+                            <input class="search__input input-look" type="search" name="search"
+                                placeholder="Найти в магазине..."
+                                style="background-image: url('images/icon-search.svg');" required>
+                        </label>
+                        <button class="search__form-btn form-btn" type="submit">Поиск</button>
+                    </form>
+                    <ul class="nav__list">
+                        <li class="nav__items">
+                            <button class="user-btn" type="button">
+                                <span class="sr-only">вход в личный кабинет</span>
+                                <svg width="32" height="32">
+                                    <use xlink:href="images/sprite.svg#icon-user"></use>
+                                </svg>
+                            </button>
+                        </li>
+                        <li class="nav__items">
+                            <button class="chosen-btn chosen-btn--nav" type="button">
+                                <span class="sr-only">избранные товары</span>
+                                <svg width="32" height="32">
+                                    <use xlink:href="images/sprite.svg#icon-heart"></use>
+                                </svg>
+                                <span class="counter">12</span>
+                            </button>
+                        </li>
+                        <li class="nav__items">
+                            <button class="basket-btn basket-btn--nav" type="button">
+                                <span class="sr-only">корзина товаров</span>
+                                <svg width="32" height="32">
+                                    <use xlink:href="images/sprite.svg#icon-basket"></use>
+                                </svg>
+                                <span class="counter">12</span>
+                            </button>
+                            <div class="basket">
+                                <h2 class="basket__title">Корзина</h2>
+                                <button class="basket__reset" type="button">очистить корзину</button>
+                                <button class="basket__close-btn close-btn" type="button">
+                                    <span class="sr-only">закрыть корзину</span>
+                                    <svg width="24" height="24">
+                                        <use xlink:href="images/sprite.svg#icon-close"></use>
+                                    </svg>
+                                </button>
+                                <ul class="basket__container">
+                                    <li class="basket__item">
+                                        <article class="product-card product-card--basket">
+                                            <a class="product-card__link--basket" href="#" target="_blank">
+                                                <img class="product-card__img"
+                                                    src="images/product-cards/pineapple-m.jpg" width="60" height="60"
+                                                    alt="ананас">
+                                            </a>
+                                            <div class="product-card__inner">
+                                                <h3 class="product-card__title product-card__title--basket">
+                                                    Ананас, 1 кг
+                                                </h3>
+                                                <span class="price">
+                                                    <span class="price__item price__item--actual">
+                                                        999
+                                                        <svg class="price__currency" width="10" height="14">
+                                                            <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                                        </svg>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <form class="product-card__amount">
+                                                <label class="product-card__label">
+                                                    <span class="sr-only">количество штук</span>
+                                                    <input class="product-card__input" type="number" name="number"
+                                                        min="0" max="99" value="1">
+                                                </label>
+                                                <span class="product-card__cost">
+                                                    2038
+                                                    <svg class="product-card__cost-currency" width="10" height="13">
+                                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                                    </svg>
+                                                </span>
+                                            </form>
+                                            <button class="product-card__close-btn close-btn" type="button">
+                                                <span class="sr-only">удалить из корзины</span>
+                                                <svg width="12" height="12">
+                                                    <use xlink:href="images/sprite.svg#icon-close"></use>
+                                                </svg>
+                                            </button>
+                                        </article>
+                                    </li>
+                                    <li class="basket__item">
+                                        <article class="product-card product-card--basket">
+                                            <a class="product-card__link--basket" href="#" target="_blank">
+                                                <img class="product-card__img"
+                                                    src="images/product-cards/dragon-fruit.jpg" width="60" height="60"
+                                                    alt="папайя">
+                                            </a>
+                                            <div class="product-card__inner">
+                                                <h3 class="product-card__title product-card__title--basket">
+                                                    Питахайя красная с белой мякотью, 1шт
+                                                </h3>
+                                                <span class="price">
+                                                    <span class="price__item price__item--actual">
+                                                        1019
+                                                        <svg class="price__currency" width="10" height="14">
+                                                            <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                                        </svg>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <form class="product-card__amount">
+                                                <label class="product-card__label">
+                                                    <span class="sr-only">количество штук</span>
+                                                    <input class="product-card__input" type="number" name="number"
+                                                        min="0" max="99" value="1">
+                                                </label>
+                                                <span class="product-card__cost">
+                                                    2038
+                                                    <svg class="product-card__cost-currency" width="10" height="13">
+                                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                                    </svg>
+                                                </span>
+                                            </form>
+                                            <button class="product-card__close-btn close-btn" type="button">
+                                                <span class="sr-only">удалить из корзины</span>
+                                                <svg width="12" height="12">
+                                                    <use xlink:href="images/sprite.svg#icon-close"></use>
+                                                </svg>
+                                            </button>
+                                        </article>
+                                    </li>
+                                </ul>
+                                <div class="basket__bottom">
+                                    <span class="basket__text">Товаров на сумму</span>
+                                    <span class="basket__total">
+                                        2038
+                                        <svg class="basket__total-currency" width="14" height="15">
+                                            <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                        </svg>
+                                    </span>
+                                    <a class="button button--basket" href="#">Оформить заказ</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="main">
+    <h1 class="sr-only">Интернет магазин продуктов ФрешОк</h1>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <a class="logo" href="#">
+            <img src="images/logo.svg" width="200" height="60" alt="Логотип магазина Фрешок">
+        </a>
+        <div class="footer__content">
+            <form class="form-subscribe" action="#">
+                <span class="form-subscribe__text">
+                    Следите за нашими акциями
+                </span>
+                <label class="form-subscribe__label">
+                    <span class="sr-only">поле для ввода email адреса</span>
+                    <input class="form-subscribe__input input-look" type="email" name="Email"
+                        placeholder="email@email.com" required>
+                </label>
+                <button class="form-subscribe__form-btn form-btn" type="submit">Подписаться</button>
+            </form>
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">О нас</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Контакты</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Публичная оферта</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Оплата и доставка</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Вакансии</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Акции</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Отзывы</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Новости</a>
+                    </li>
+                </ul>
+            </nav>
+            <address class="connection">
+                <ul class="connection__inner">
+                    <li class="connection__item">
+                        <a href="tel:+7907288365">
+                            Горячая линия +7 907 288 365
+                        </a>
+                    </li>
+                    <li class="connection__item">
+                        Санкт-Петербург, ул. Ленина, 1
+                    </li>
+                </ul>
+                <ul class="social">
+                    <li class="social__item">
+                        <a class="social__link" href="#" target="_blank">
+                            <span class="sr-only">Фейсбук</span>
+                            <svg width="32" height="32">
+                                <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" target="_blank">
+                            <span class="sr-only">Ютюб</span>
+                            <svg width="32" height="32">
+                                <use xlink:href="images/sprite.svg#icon-youtube"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" target="_blank">
+                            <span class="sr-only">Телеграм</span>
+                            <svg width="32" height="32">
+                                <use xlink:href="images/sprite.svg#icon-telegram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" target="_blank">
+                            <span class="sr-only">Инстаграм</span>
+                            <svg width="32" height="32">
+                                <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </address>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="footer__wrapper">
+                <span class="footer__copy">&copy; 2021 Фpешок</span>
+                <span class="footer__thumb">
+                    <span class="sr-only">Принимаем к оплате Visa</span>
+                    <svg width="93" height="30">
+                        <use xlink:href="images/sprite.svg#icon-visa"></use>
+                    </svg>
+                </span>
+                <span class="footer__thumb">
+                    <span class="sr-only">Принимаем к оплате Mastercard</span>
+                    <svg width="50" height="30">
+                        <use xlink:href="images/sprite.svg#icon-mc"></use>
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/main.min.js"></script>
+</body>
+
+</html>
