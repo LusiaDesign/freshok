@@ -1,0 +1,15 @@
+.logo {
+    &__mobile {
+        display: none;
+    }
+
+    @media (max-width: 576px) {
+        &__dekstop {
+            display: none;
+        }
+
+        &__mobile {
+            display: block;
+        }
+    }
+}

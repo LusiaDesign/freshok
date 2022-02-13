@@ -1,6 +1,42 @@
 .connection {
+    color: $white;
+
     &__item {
-        color: $white;
         margin-bottom: 18px;
+    }
+
+    &__link {
+        font-size: 18px;
+        line-height: 1.2;
+        color: $dark-800;
+        margin-bottom: 36px;
+        margin-left: -30px;
+    }
+
+    &__icon-tell {
+        margin-bottom: -5px;
+    }
+
+    &__icon {
+        margin-bottom: -10px;
+    }
+
+    @media (max-width: 576px) {
+        &__inner {
+            width: 100%;
+
+            &--menu {
+                padding-left: 30px;
+            }
+        }
+
+        &__tell {
+            display: block;
+            width: 100%;
+        }
+
+        &__icon {
+            margin-bottom: -20px;
+        }
     }
 }

@@ -1,33 +1,4 @@
 .catalog {
-    &__btn {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-shrink: 0;
-        background-color: $white;
-        border-radius: 6px;
-        font-weight: 600;
-        color: $green-900;
-        padding: 16px 18px;
-        width: 240px;
-
-        &.active {
-            border-radius: 6px 6px 0px 0px;
-
-            .catalog__arrow {
-                transform: rotate(180deg);
-            }
-        }
-
-        &:hover {
-            background-color: $green-200;
-        }
-    }
-
-    &__arrow {
-        transition: all 0.5s;
-    }
-
     &__dropdown {
         display: none;
         position: absolute;
@@ -79,5 +50,13 @@
         &:active {
             color: $silver-600;
         }
+    }
+
+    @media (max-width: 1250px) {
+        margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
     }
 }

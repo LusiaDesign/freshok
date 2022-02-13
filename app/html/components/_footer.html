@@ -1,10 +1,10 @@
 <footer class="footer">
     <div class="container">
-        <a class="logo" href="#">
+        <a class="footer__logo logo" href="#">
             <img src="images/logo.svg" width="200" height="60" alt="Логотип магазина Фрешок">
         </a>
         <div class="footer__content">
-            <form class="form-subscribe" action="#">
+            <form class="footer__form-subscribe form-subscribe" action="#">
                 <span class="form-subscribe__text">
                     Следите за нашими акциями
                 </span>
@@ -43,10 +43,10 @@
                     </li>
                 </ul>
             </nav>
-            <address class="connection">
+            <address class="footer__connection connection">
                 <ul class="connection__inner">
                     <li class="connection__item">
-                        <a href="tel:+7907288365">
+                        <a class="connection__tell" href="tel:+7907288365">
                             Горячая линия +7 907 288 365
                         </a>
                     </li>
@@ -95,18 +95,20 @@
         <div class="container">
             <div class="footer__wrapper">
                 <span class="footer__copy">&copy; 2021 Фpешок</span>
-                <span class="footer__thumb">
-                    <span class="sr-only">Принимаем к оплате Visa</span>
-                    <svg width="93" height="30">
-                        <use xlink:href="images/sprite.svg#icon-visa"></use>
-                    </svg>
-                </span>
-                <span class="footer__thumb">
-                    <span class="sr-only">Принимаем к оплате Mastercard</span>
-                    <svg width="50" height="30">
-                        <use xlink:href="images/sprite.svg#icon-mc"></use>
-                    </svg>
-                </span>
+                <div class="footer__inner">
+                    <span class="footer__thumb">
+                        <span class="sr-only">Принимаем к оплате Visa</span>
+                        <svg width="93" height="30">
+                            <use xlink:href="images/sprite.svg#icon-visa"></use>
+                        </svg>
+                    </span>
+                    <span class="footer__thumb">
+                        <span class="sr-only">Принимаем к оплате Mastercard</span>
+                        <svg width="50" height="30">
+                            <use xlink:href="images/sprite.svg#icon-mc"></use>
+                        </svg>
+                    </span>
+                </div>
             </div>
         </div>
     </div>

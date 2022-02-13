@@ -29,4 +29,20 @@
             border-bottom: 2px solid rgba(99, 166, 14, 0.2);
         }
     }
+
+    @media (max-width: 576px) {
+        margin-bottom: 10px;
+
+        &__item {
+            margin-bottom: 15px;
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+
+        &__btn {
+            font-size: 14px;
+        }
+    }
 }

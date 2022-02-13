@@ -35,9 +35,8 @@ svg {
 
 .no-scroll {
     overflow: hidden;
-    margin-right: calc(100vw - 100%);
+    margin-right: calc(17px - (100vw - 100%));
 }
-
 
 .sr-only {
     position: absolute;
@@ -60,6 +59,10 @@ svg {
 
 .section {
     padding: 72px 0;
+
+    @media (max-width: 576px) {
+        padding: 48px 0;
+    }
 }
 
 .main {
@@ -72,6 +75,11 @@ svg {
     font-size: 32px;
     text-transform: uppercase;
     margin-bottom: 30px;
+
+    @media (max-width: 576px) {
+        margin-bottom: 24px;
+        font-size: 24px;
+    }
 }
 
 .input-look {
@@ -85,6 +93,11 @@ svg {
     &:focus {
         outline: 1px solid #63A60E;
         box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
+    }
+
+    @media (max-width: 1170px) {
+        border-radius: 0;
+        border: 1px solid #31352B;
     }
 }
 
@@ -204,6 +217,59 @@ svg {
 .slick-disabled {
     color: $silver-600;
 }
+
+.slick-dots {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+
+    @media (max-width: 768px) {
+        bottom: 30px;
+    }
+
+    @media (max-width: 576px) {
+        bottom: 15px;
+    }
+}
+
+.slick-dots li {
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $white;
+    border: 1px solid $silver-600;
+
+    &:not(:last-child) {
+        margin-right: 12px;
+    }
+
+    &:hover {
+        background-color: $green-200;
+    }
+
+    &:focus {
+        border: 1px solid $green-hov;
+    }
+
+    &:active {
+        opacity: 0.8;
+    }
+
+    &.slick-active {
+        background-color: $green-hov;
+        border-color: $green-hov;
+    }
+
+    @media (max-width: 768px) {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+
 
 .mixitup-control-active {
     border-bottom: 2px solid rgba(99, 166, 14, 0.2);

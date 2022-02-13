@@ -8,5 +8,32 @@
         grid-auto-rows: 1fr;
         grid-gap: 30px;
         margin-bottom: 48px;
+
+        @media (max-width: 1250px) {
+            max-width: 960px;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 0 auto 48px auto;
+        }
+
+        @media (max-width: 992px) {
+            max-width: 630px;
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 768px) {
+            grid-gap: 6px;
+            max-width: 610px;
+        }
+
+        @media (max-width: 650px) {
+            grid-template-columns: repeat(1, 400px);
+            max-width: 400px;
+        }
+
+        @media (max-width: 476px) {
+            grid-template-columns: repeat(1, 300px);
+            max-width: 300px;
+        }
     }
 }

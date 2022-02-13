@@ -1,0 +1,25 @@
+.search-btn {
+    display: none;
+    padding: 7px;
+    border-radius: 3px;
+    background-color: transparent;
+    color: $white;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &:focus {
+        background-color: rgba(255, 255, 255, 0.1);
+        box-shadow: inset 0px 0px 0px 3px $green-100;
+    }
+
+    &:active {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    @media (max-width: 1170px) {
+        display: block;
+    }
+}

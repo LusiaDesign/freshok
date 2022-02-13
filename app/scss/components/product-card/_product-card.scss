@@ -4,6 +4,8 @@
     border-radius: 6px;
     padding-top: 57px;
     text-align: left;
+    height: 100%;
+    max-width: 300px;
     transition: all 0.3s;
 
     &:hover {
@@ -49,7 +51,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-image: url('../images/icons/icon-search-product.svg');
+            background-image: url('../images/icons/icon-search-product-card.svg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20px 20px;
@@ -100,6 +102,7 @@
     }
 
     &__cost {
+        font-weight: 600;
         font-size: 20px;
         line-height: 1;
         color: $dark-500;
@@ -134,13 +137,29 @@
         }
     }
 
-    &__close-btn {
+    &__delete-btn {
+        display: block;
+        position: absolute;
         top: 12px;
         right: 12px;
         width: 24px;
         height: 24px;
         padding: 1px;
+        border-radius: 3px;
         color: $silver-600;
+
+        &:hover {
+            background-color: $green-100;
+            color: $green-900;
+        }
+
+        &:focus {
+            box-shadow: 0px 0px 0px 3px $green-200;
+        }
+
+        &:active {
+            background-color: rgba(193, 193, 193, 0.3);
+        }
     }
 
     &__status {
@@ -196,5 +215,50 @@
         justify-content: space-between;
         align-items: end;
         padding-top: 9px;
+    }
+
+    @media (max-width: 768px) {
+        &--stock {
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 576px) {
+        &--basket {
+            padding: 12px 15px;
+            flex-wrap: wrap;
+            justify-content: start;
+        }
+
+        &__link {
+            &--basket {
+                margin-right: 12px;
+            }
+        }
+
+        &__img {
+            &--small {
+                object-fit: contain;
+                height: 120px;
+            }
+        }
+
+        &__inner {
+            min-width: 70%;
+        }
+
+        &__amount {
+            width: 100%;
+            margin-top: 18px;
+            justify-content: space-between;
+        }
+
+        &__delete-btn {
+            top: 5px;
+            right: 5px;
+            width: 40px;
+            height: 40px;
+            padding: 13px;
+        }
     }
 }

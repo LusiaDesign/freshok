@@ -4,28 +4,36 @@
 @import 'vars';
 @import 'global';
 
-@import 'section/nav';
+@import 'header/nav';
+@import 'header/menu';
+@import 'header/catalog';
+@import 'header/search';
+@import 'header/basket';
+
 @import 'section/banner';
 @import 'section/products-top';
 @import 'section/promotion';
 @import 'section/products-stock';
 @import 'section/news';
 
-@import 'components/buttons/user-btn';
+@import 'components/buttons/menu-btn';
+@import 'components/buttons/catalog-btn';
 @import 'components/buttons/form-btn';
+@import 'components/buttons/search-btn';
+@import 'components/buttons/user-btn';
 @import 'components/buttons/chosen-btn';
 @import 'components/buttons/basket-btn';
 @import 'components/buttons/close-btn';
 @import 'components/buttons/button';
 
-@import 'components/basket';
-@import 'components/catalog';
-@import 'components/search';
+
+@import 'components/product-card/product-card';
+@import 'components/product-card/price';
+@import 'components/product-card/badge';
+
+@import 'components/logo';
 @import 'components/advantages';
-@import 'components/price';
 @import 'components/categories-products';
-@import 'components/product-card';
-@import 'components/badge';
 @import 'components/promotion-card';
 @import 'components/brands';
 @import 'components/news-card';

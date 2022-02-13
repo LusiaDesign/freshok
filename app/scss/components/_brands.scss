@@ -10,9 +10,34 @@
         height: 60px;
         opacity: 0.5;
         transition: all 0.3s;
+        z-index: 5;
 
         &:hover {
             opacity: 1;
+        }
+
+        &--sprite {
+            background-image: url('../images/brands/sprite.svg');
+        }
+
+        &--pepper {
+            background-image: url('../images/brands/dr-pepper.svg');
+        }
+
+        &--cola {
+            background-image: url('../images/brands/cola.svg');
+        }
+
+        &--pepsi {
+            background-image: url('../images/brands/pepsi.svg');
+        }
+
+        &--redbull {
+            background-image: url('../images/brands/redbull.svg');
+        }
+
+        &--fanta {
+            background-image: url('../images/brands/fanta.svg');
         }
     }
 }

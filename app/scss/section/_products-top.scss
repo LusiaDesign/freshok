@@ -4,8 +4,24 @@
     &__container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: 1fr;
         grid-gap: 30px;
         margin-bottom: 48px;
+
+        @media (max-width: 1250px) {
+            max-width: 960px;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 0 auto 48px auto;
+        }
+
+        @media (max-width: 992px) {
+            grid-gap: 10px;
+        }
+
+        @media (max-width: 768px) {
+            max-width: 610px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 6px;
+            margin-bottom: 24px;
+        }
     }
 }
