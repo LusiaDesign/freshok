@@ -1,0 +1,38 @@
+.breadcrumbs {
+    padding: 24px 0;
+    background-color: $silver-100;
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        position: relative;
+        margin-right: 5px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            right: 0;
+            background-image: url('../../images/icon-chevron.svg');
+            @extend %bg;
+            width: 6px;
+            height: 10px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        padding-right: 10px;
+        color: $dark-500;
+    }
+}

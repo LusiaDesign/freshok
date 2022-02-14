@@ -2,6 +2,9 @@ $(function () {
     $('.catalog-btn').on('click', function () {
         $('.catalog-btn, .catalog__dropdown').toggleClass('active');
     });
+    $('.catalog-btn').on('click', function () {
+        $(this)('.catalog__dropdown').slideToggle();
+    });
     $('.search-btn').on('click', function () {
         $('.search').toggleClass('active');
     });
