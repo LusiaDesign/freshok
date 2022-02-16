@@ -10,6 +10,19 @@
         &.active {
             display: block;
         }
+
+        &--menu {
+            display: none;
+            position: absolute;
+            background-color: $white;
+            z-index: 2;
+            width: 95%;
+            padding-right: 15px;
+
+            &.active {
+                display: block;
+            }
+        }
     }
 
     &__item {

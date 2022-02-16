@@ -38,6 +38,36 @@ svg {
     margin-right: calc(17px - (100vw - 100%));
 }
 
+.no-scroll--menu {
+    overflow: hidden;
+    margin-left: calc(17px - (100vw - 100%));
+}
+
+.no-scroll--mobile {
+    overflow: hidden;
+}
+
+.no-scroll,
+.no-scroll--menu {
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 160px;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        @media (max-width: 768px) {
+            top: 156px;
+        }
+
+        @media (max-width: 576px) {
+            top: 147px;
+        }
+    }
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -95,9 +125,11 @@ svg {
         box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
     }
 
-    @media (max-width: 1170px) {
-        border-radius: 0;
-        border: 1px solid #31352B;
+    &--header {
+        @media (max-width: 1170px) {
+            border-radius: 0;
+            border: 1px solid #31352B;
+        }
     }
 }
 
@@ -112,33 +144,6 @@ svg {
     font-size: 10px;
     line-height: 1;
     padding: 3px 4px;
-}
-
-.slick-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 60px;
-    height: 60px;
-    padding: 14px 21px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 6px;
-    z-index: 1;
-    color: $dark-500;
-
-    &:hover {
-        background-color: $green-200;
-        color: $green-900;
-    }
-
-    &:focus {
-        box-shadow: 0px 0px 0px 3px rgba(99, 166, 14, 0.5);
-        color: #5a5a5a;
-    }
-
-    &:active {
-        color: $green-900;
-    }
 }
 
 .jq-number {
@@ -206,6 +211,33 @@ svg {
     }
 }
 
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    padding: 14px 21px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    z-index: 1;
+    color: $dark-500;
+
+    &:hover {
+        background-color: $green-200;
+        color: $green-900;
+    }
+
+    &:focus {
+        box-shadow: 0px 0px 0px 3px rgba(99, 166, 14, 0.5);
+        color: #5a5a5a;
+    }
+
+    &:active {
+        color: $green-900;
+    }
+}
+
 .slick-next {
     right: 51px;
 }
@@ -222,14 +254,10 @@ svg {
     display: flex;
     position: absolute;
     left: 50%;
-    bottom: 50px;
+    bottom: 35px;
     transform: translateX(-50%);
 
     @media (max-width: 768px) {
-        bottom: 30px;
-    }
-
-    @media (max-width: 576px) {
         bottom: 15px;
     }
 }
@@ -271,4 +299,36 @@ svg {
 
 .mixitup-control-active {
     border-bottom: 2px solid rgba(99, 166, 14, 0.2);
+}
+
+.jq-selectbox {
+    padding: 15px 45px 15px 11px;
+    position: relative;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+    color: $dark-500;
+    background-color: $white;
+    margin-right: 15px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 23px;
+        right: 15px;
+        background-image: url('../../images/sprite.svg#icon-chevron-up');
+        @extend %bg;
+        width: 11px;
+        height: 6px;
+    }
+
+    &.opened {
+        &::after {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__dropdown {
+        padding: 15px 45px 15px 11px;
+        background-color: $white;
+    }
 }

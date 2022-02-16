@@ -4,6 +4,10 @@
 
     &__img {
         width: 100%;
+
+        @media (max-width: 992px) {
+            height: 200px;
+        }
     }
 
     &__meta {
@@ -40,16 +44,8 @@
         line-height: 1.5;
         min-height: 4.5em;
         margin: 18px;
-    }
 
-    &:hover {
-        .news-card__title {
-            color: $green-900;
-        }
-    }
-
-    @media (max-width: 768px) {
-        &__title {
+        @media (max-width: 768px) {
             font-size: 14px;
             line-height: 1.4;
             min-height: 4.2em;
@@ -57,9 +53,9 @@
         }
     }
 
-    @media (max-width: 576px) {
-        &__img {
-            height: 200px;
+    &:hover {
+        .news-card__title {
+            color: $green-900;
         }
     }
 }

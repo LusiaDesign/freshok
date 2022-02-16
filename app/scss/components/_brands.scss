@@ -1,12 +1,9 @@
 .brands {
 
-    &__wrapper {
-        margin-left: 60px;
-    }
-
     &__item {
         background-repeat: no-repeat;
-        width: 80px;
+        max-width: 80px;
+        margin: 0 65px;
         height: 60px;
         opacity: 0.5;
         transition: all 0.3s;
@@ -38,6 +35,10 @@
 
         &--fanta {
             background-image: url('../images/brands/fanta.svg');
+        }
+
+        @media (max-width: 576px) {
+            margin: 0 45px;
         }
     }
 }

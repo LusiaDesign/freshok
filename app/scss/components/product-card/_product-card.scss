@@ -70,6 +70,19 @@
 
         &--basket {
             max-width: 60px;
+
+            @media (max-width: 576px) {
+                margin-right: 12px;
+            }
+        }
+    }
+
+    &__img {
+        &--small {
+            @media (max-width: 576px) {
+                object-fit: contain;
+                height: 120px;
+            }
         }
     }
 
@@ -98,11 +111,21 @@
         padding: 0;
         max-width: 170px;
         width: 100%;
+
+        @media (max-width: 576px) {
+            min-width: 70%;
+        }
     }
 
     &__amount {
         display: flex;
         align-items: end;
+
+        @media (max-width: 576px) {
+            width: 100%;
+            margin-top: 18px;
+            justify-content: space-between;
+        }
     }
 
     &__input {
@@ -168,6 +191,13 @@
         &:active {
             background-color: rgba(193, 193, 193, 0.3);
         }
+
+        @media (max-width: 768px) {
+            top: 3px;
+            right: 3px;
+            width: 44px;
+            height: 44px;
+        }
     }
 
     &__status {
@@ -208,6 +238,8 @@
         display: flex;
         padding: 12px;
         background-color: $white;
+        max-width: 100%;
+
 
         &:hover {
             .product-card__link {
@@ -224,50 +256,49 @@
         justify-content: space-between;
         align-items: end;
         padding-top: 9px;
-    }
 
-    @media (max-width: 768px) {
-        &--stock {
-            max-width: 100%;
-        }
-    }
-
-    @media (max-width: 576px) {
-        &--basket {
+        @media (max-width: 576px) {
             padding: 12px 15px;
             flex-wrap: wrap;
             justify-content: start;
         }
+    }
 
-        &__link {
-            &--basket {
-                margin-right: 12px;
-            }
+    &.list {
+        display: flex;
+        max-width: 466px;
+        padding: 0;
+
+        .product-card__link {
+            margin-top: 6px;
         }
 
-        &__img {
-            &--small {
-                object-fit: contain;
-                height: 120px;
-            }
+        .product-card__img {
+            width: 200px;
+            height: 140px;
         }
 
-        &__inner {
-            min-width: 70%;
+        .product-card__chosen-btn {
+            top: 57px;
+            right: 11px;
         }
 
-        &__amount {
-            width: 100%;
-            margin-top: 18px;
-            justify-content: space-between;
+        .product-card__wrapper {
+            padding: 12px 18px;
         }
 
-        &__delete-btn {
-            top: 5px;
-            right: 5px;
-            width: 40px;
-            height: 40px;
-            padding: 13px;
+        .badge {
+            top: 2px;
+            left: 6px;
+        }
+
+        .product-card__wrap {
+            margin-bottom: 12px;
+        }
+
+        .product-card__title {
+            padding-right: 50px;
+            margin-bottom: 13px;
         }
     }
 }

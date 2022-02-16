@@ -36,13 +36,13 @@
                                     </a>
                                 </li>
                             </ul>
-                            <button class="catalog-btn catalog-btn--menu" type="button">
+                            <button class="catalog-btn--menu" type="button">
                                 <svg class="catalog-btn__icon" width="25" height="20">
                                     <use xlink:href="images/sprite.svg#icon-btn"></use>
                                 </svg>
                                 Каталог товаров
                             </button>
-                            <ul class="catalog__dropdown">
+                            <ul class="catalog__dropdown--menu">
                                 <li class="catalog__item">
                                     <a class="catalog__link" href="#">Овощи и фрукты</a>
                                 </li>
@@ -81,10 +81,11 @@
                                 </li>
                             </ul>
                             <address class="connection connection--menu">
-                                <ul class="connection__inner connection__inner--menu">
+                                <ul class="connection__inner">
                                     <li class="connection__item">
-                                        <a class="connection__link" href="tel:+7907288365">
-                                            <svg class="connection__icon-tell" width="25" height="24">
+                                        <a class="connection__link connection__link--phone" href="tel:+7907288365">
+                                            <svg class="connection__icon connection__icon--phone" width="25"
+                                                height="24">
                                                 <use xlink:href="images/sprite.svg#icon-tell"></use>
                                             </svg>
                                             +7 907 288 365
@@ -99,9 +100,9 @@
                                         </a>
                                     </li>
                                 </ul>
-                                <ul class="social social--menu">
+                                <ul class="social">
                                     <li class="social__item">
-                                        <a class="social__link" href="#" target="_blank">
+                                        <a class="social__link social__link--menu" href="#" target="_blank">
                                             <span class="sr-only">Фейсбук</span>
                                             <svg width="32" height="32">
                                                 <use xlink:href="images/sprite.svg#icon-facebook"></use>
@@ -109,7 +110,7 @@
                                         </a>
                                     </li>
                                     <li class="social__item">
-                                        <a class="social__link" href="#" target="_blank">
+                                        <a class="social__link social__link--menu" href="#" target="_blank">
                                             <span class="sr-only">Ютюб</span>
                                             <svg width="32" height="32">
                                                 <use xlink:href="images/sprite.svg#icon-youtube"></use>
@@ -117,7 +118,7 @@
                                         </a>
                                     </li>
                                     <li class="social__item">
-                                        <a class="social__link" href="#" target="_blank">
+                                        <a class="social__link social__link--menu" href="#" target="_blank">
                                             <span class="sr-only">Телеграм</span>
                                             <svg width="32" height="32">
                                                 <use xlink:href="images/sprite.svg#icon-telegram"></use>
@@ -125,7 +126,7 @@
                                         </a>
                                     </li>
                                     <li class="social__item">
-                                        <a class="social__link" href="#" target="_blank">
+                                        <a class="social__link social__link--menu" href="#" target="_blank">
                                             <span class="sr-only">Инстаграм</span>
                                             <svg width="32" height="32">
                                                 <use xlink:href="images/sprite.svg#icon-instagram"></use>
@@ -254,11 +255,11 @@
                     <form class="search" action="#">
                         <label class="search__label">
                             <span class="sr-only">ввести поиск товаров</span>
-                            <input class="search__input input-look" type="search" name="search"
+                            <input class="search__input input-look input-look--header" type="search" name="search"
                                 placeholder="Найти в магазине..."
                                 style="background-image: url('images/icon-search.svg');" required>
                         </label>
-                        <button class="search__form-btn form-btn" type="submit">Поиск</button>
+                        <button class="search__form-btn form-btn form-btn--header" type="submit">Поиск</button>
                     </form>
                     <ul class="nav__list">
                         <li class="nav__items">

@@ -8,6 +8,8 @@
     }
 
     @media (max-width: 1170px) {
-        border-radius: 0;
+        &--header {
+            border-radius: 0;
+        }
     }
 }

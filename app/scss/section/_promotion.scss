@@ -5,6 +5,12 @@
         display: flex;
         justify-content: space-between;
         align-items: stretch;
+
+        @media (max-width: 1250px) {
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
     }
 
     &__item {
@@ -18,43 +24,24 @@
                 max-width: 346px;
             }
         }
-    }
 
-    @media (max-width: 1250px) {
-        &__wrapper {
-            flex-wrap: wrap;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        &__item {
+        @media (max-width: 1250px) {
             margin-bottom: 15px;
             max-width: 49%;
 
             &--big {
                 max-width: 100%;
-
-                .promotion-card__title {
-                    max-width: 100%;
-                }
             }
         }
-    }
 
-    @media (max-width: 768px) {
-        &__wrapper {
-            flex-direction: column;
-            max-width: 83%;
-        }
-
-        &__item {
+        @media (max-width: 630px) {
             max-width: 100%;
-        }
-    }
 
-    @media (max-width: 576px) {
-        &__wrapper {
-            max-width: 100%;
+            &--big {
+                .promotion-card__title {
+                    max-width: 270px;
+                }
+            }
         }
     }
 }

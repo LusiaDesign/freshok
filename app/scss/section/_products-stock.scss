@@ -22,16 +22,12 @@
         }
 
         @media (max-width: 768px) {
-            grid-gap: 6px;
-            max-width: 610px;
-        }
-
-        @media (max-width: 650px) {
             grid-template-columns: repeat(1, 400px);
+            grid-gap: 6px;
             max-width: 400px;
         }
 
-        @media (max-width: 476px) {
+        @media (max-width: 575px) {
             grid-template-columns: repeat(1, 300px);
             max-width: 300px;
         }

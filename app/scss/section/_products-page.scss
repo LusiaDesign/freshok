@@ -2,6 +2,12 @@
     padding-top: 48px;
 
     &__title {
+        font-family: 'Ruda', sans-serif;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 1.2;
+        letter-spacing: 0.03em;
+
         margin-bottom: 48px;
     }
 
@@ -12,16 +18,55 @@
 
     &__filters {
         width: 23%;
-        background-color: aquamarine;
     }
 
-    &__container {
+    &__content {
         width: 75%;
     }
 
-    &__inner {
+    &__filter-buttons {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin-bottom: 48px;
+    }
+
+    &__by-name {
+        margin-right: 15px;
+    }
+
+    &__number {
+        margin-right: 20px;
+    }
+
+    &__filter-btn {
+        width: 47px;
+        height: 47px;
+        background-color: $silver-100;
+        border-radius: 3px;
+        color: $silver-600;
+        margin-right: 20px;
+
+        &.active {
+            color: $green-hov;
+        }
+    }
+
+    &__container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px;
+        margin-bottom: 48px;
+
+        &.list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
     }
 }

@@ -28,13 +28,14 @@
 
     &--menu {
         display: block;
+        text-align: left;
+        width: 100%;
         font-size: 18px;
         line-height: 1;
         color: $dark-800;
         padding: 14px 0;
         border-radius: 0;
-        background-color: $white;
-        margin-bottom: 40px;
+        margin-bottom: 18px;
 
         &:focus {
             box-shadow: inset 0px 0px 0px 3px $green-100;

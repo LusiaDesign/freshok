@@ -2,26 +2,49 @@ $(function () {
     $('.catalog-btn').on('click', function () {
         $('.catalog-btn, .catalog__dropdown').toggleClass('active');
     });
-    $('.catalog-btn').on('click', function () {
-        $(this)('.catalog__dropdown').slideToggle();
+    $('.catalog-btn--menu').on('click', function () {
+        $('.catalog__dropdown--menu').toggleClass('active');
     });
     $('.search-btn').on('click', function () {
         $('.search').toggleClass('active');
     });
     $('.menu-btn').on('click', function () {
-        $('.menu').toggleClass('active');
-        $('body').toggleClass('no-scroll');
+        $('.menu').addClass('active');
+        $('body').addClass('no-scroll--menu');
         $('.basket').removeClass('active');
+        $('body').removeClass('no-scroll');
     });
     $('.basket-btn--nav').on('click', function () {
         $('.basket').toggleClass('active');
-        $('body').toggleClass('no-scroll');
         $('.menu').removeClass('active');
+        $('body').removeClass('no-scroll--menu');
+        $('body').toggleClass('no-scroll');
+        var w = $(window).width();
+        if (w <= 576) {
+            $('body').removeClass('no-scroll');
+            $('body').toggleClass('no-scroll--mobile');
+        }
     });
     $('.close-btn').on('click', function () {
+        $('body').removeClass('no-scroll');
+        $('body').removeClass('no-scroll--menu');
+        $('body').removeClass('no-scroll--mobile');
         $('.menu').removeClass('active');
         $('.basket').removeClass('active');
-        $('body').removeClass('no-scroll');
+    });
+    $('.products-page__filter-btn').on('click', function () {
+        $('.products-page__filter-btn').removeClass('active');
+        $(this).addClass('active');
+    });
+    $('.btn-list').on('click', function () {
+        $('.products-page__container, .product-card').toggleClass('list');
+    });
+    $('.btn-grid').on('click', function () {
+        $('.products-page__container, .product-card').removeClass('list');
+    });
+    $('.pagination__link').on('click', function () {
+        $('.pagination__link').removeClass('active');
+        $(this).addClass('active');
     });
     $('.banner__wrapper').slick({
         prevArrow: '<button type="button" class="slick-arrow slick-prev"><span class="sr-only">Предыдущий слайд</span><svg width="19" height="32"><use xlink: href="../images/sprite.svg#icon-arrow-left"></use></svg></button>',
@@ -45,6 +68,12 @@ $(function () {
         slidesToShow: 6,
         slidesToScroll: 1,
         responsive: [{
+                breakpoint: 1250,
+                settings: {
+                    slidesToShow: 5
+                }
+            },
+            {
                 breakpoint: 992,
                 settings: {
                     slidesToShow: 4,
@@ -57,7 +86,7 @@ $(function () {
                 }
             },
             {
-                breakpoint: 575,
+                breakpoint: 455,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
@@ -66,16 +95,17 @@ $(function () {
         ]
     });
     $(document).mouseup(function (e) {
-        var block = $(".catalog, .basket, .menu");
+        var block = $(".catalog");
         if (!block.is(e.target) &&
             block.has(e.target).length === 0) {
-            $('.catalog-btn, .catalog__dropdown, .basket, .menu').removeClass('active');
-            $('body').removeClass('no-scroll');
+            $('.catalog-btn, .catalog__dropdown').removeClass('active');
         }
     });
-    //
     $('.product-card__input').styler();
-
+    $('.products-page__filter-sort').styler();
+    $('.filters__pol').ionRangeSlider({
+        type: "double"
+    });
     var containerEl1 = document.querySelector('[data-ref="container-1"]');
     var containerEl2 = document.querySelector('[data-ref="container-2"]');
 
