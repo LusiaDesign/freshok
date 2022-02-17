@@ -3,6 +3,12 @@
         <h2 class="products-page__title">Каталог товаров</h2>
         <div class="products-page__wrapper">
             <div class="products-page__filters filters">
+                <button class="close-btn close-btn--filters" type="button">
+                    <span class="sr-only">закрыть фильры</span>
+                    <svg width="18" height="18">
+                        <use xlink:href="images/sprite.svg#icon-close"></use>
+                    </svg>
+                </button>
                 <div class="filters__item filters__item--category">
                     <h3 class="filters__title">
                         Категории
@@ -130,31 +136,54 @@
                         </label>
                     </form>
                 </div>
-                <div class="filters__item">
+                <div class="filters__item filters-price">
                     <h3 class="filters__title">
                         Цена
                         <svg class="filters__arrow" width="18" height="11">
                             <use xlink:href="images/sprite.svg#icon-chevron-up"></use>
                         </svg>
                     </h3>
-                    <form class="filters__price" action="">
-                        <input class="filters__pol" type="text" data-min="0" data-max="1000" data-from="200"
-                            data-to="500">
+                    <form class="filters-price__form" action="">
+                        <label class="filters-price__label">
+                            <div class="filters-price__wrap">
+                                <span class="filters-price__box">
+                                    от
+                                    <input class="filters-price__inner filters-price__from" type="text" value="0">
+                                    <svg width="10" height="16">
+                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                    </svg>
+                                </span>
+                                <span class="filters-price__box">
+                                    до
+                                    <input class="filters-price__inner filters-price__to" type="text" value="0">
+                                    <svg width="10" height="16">
+                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                    </svg>
+                                    </input>
+                            </div>
+                            <input class="filters-price__input" type="text" data-min="0" data-max="1000" data-from="100"
+                                data-to="1000" value="">
+                        </label>
                     </form>
                 </div>
             </div>
-
             <div class="products-page__content">
                 <div class="products-page__filter-buttons">
-                    <form class="products-page__filter-selects" action="#">
-                        <select class="products-page__filter-sort sort-name" name="by-name">
+                    <button class="products-page__filter-btn" type="button">
+                        <span class="sr-only">вызов фильтров товаров</span>
+                        <svg width="32" height="36">
+                            <use xlink:href="images/sprite.svg#icon-filter"></use>
+                        </svg>
+                    </button>
+                    <form class="products-page__selects" action="#">
+                        <select class="products-page__sort products-page__sort--name" name="by-name">
                             <option value="По названию">По названию</option>
                             <option value="По популярности">По популярности</option>
                             <option value="Сначала дешевые">Сначала дешевые</option>
                             <option value="Сачала дорогие">Сачала дорогие</option>
                             <option value="По алфавиту">По алфавиту</option>
                         </select>
-                        <select class="products-page__filter-sort sort-number" name="number">
+                        <select class="products-page__sort products-page__sort--number" name="number">
                             <option value="По 12">По 12</option>
                             <option value="По 18">По 18</option>
                             <option value="По 24">По 24</option>
@@ -162,13 +191,13 @@
                             <option value="По 36">По 36</option>
                         </select>
                     </form>
-                    <button class="products-page__filter-btn btn-list">
+                    <button class="products-page__toggle-btn btn-list" type="button">
                         <span class="sr-only">расклад меню список</span>
                         <svg width="36" height="34">
                             <use xlink:href="images/sprite.svg#icon-grid-btn2"></use>
                         </svg>
                     </button>
-                    <button class="products-page__filter-btn btn-grid">
+                    <button class="products-page__toggle-btn btn-grid" type="button">
                         <span class="sr-only">расклад меню сетка</span>
                         <svg width="35" height="35">
                             <use xlink:href="images/sprite.svg#icon-grid-btn1"></use>
@@ -176,7 +205,7 @@
                     </button>
                 </div>
                 <ul class="products-page__container">
-                    <li class="products-page__item mix fruit">
+                    <li class="products-page__item">
                         <article class="product-card">
                             <span class="badge">
                                 <span class="badge__item badge__item--new">Новинка</span>
@@ -229,7 +258,7 @@
                             </div>
                         </article>
                     </li>
-                    <li class="products-page__item mix fruit">
+                    <li class="products-page__item">
                         <article class="product-card">
                             <button class="product-card__chosen-btn chosen-btn" type="button">
                                 <span class="sr-only">добавить в избранное</span>
@@ -269,7 +298,7 @@
                             </div>
                         </article>
                     </li>
-                    <li class="products-page__item mix fruit">
+                    <li class="products-page__item">
                         <article class="product-card">
                             <span class="badge">
                                 <span class="badge__item badge__item--hit">хит</span>
@@ -314,7 +343,7 @@
                             </div>
                         </article>
                     </li>
-                    <li class="products-page__item mix vegetables">
+                    <li class="products-page__item">
                         <article class="product-card">
                             <span class="badge">
                                 <span class="badge__item badge__item--hit">хит</span>
@@ -359,7 +388,7 @@
                             </div>
                         </article>
                     </li>
-                    <li class="products-page__item mix drinks">
+                    <li class="products-page__item">
                         <article class="product-card">
                             <span class="badge">
                                 <span class="badge__item badge__item--sale">-30%</span>
@@ -411,7 +440,7 @@
                             </div>
                         </article>
                     </li>
-                    <li class="products-page__item mix groceries">
+                    <li class="products-page__item">
                         <article class="product-card">
                             <span class="badge">
                                 <span class="badge__item badge__item--new">Новинка</span>
@@ -456,7 +485,7 @@
                             </div>
                         </article>
                     </li>
-                    <li class="products-page__item mix vegetables">
+                    <li class="products-page__item">
                         <article class="product-card">
                             <span class="badge">
                                 <span class="badge__item badge__item--new">Новинка</span>
@@ -502,7 +531,7 @@
                             </div>
                         </article>
                     </li>
-                    <li class="products-page__item mix groceries">
+                    <li class="products-page__item">
                         <article class="product-card">
                             <button class="product-card__chosen-btn chosen-btn" type="button">
                                 <span class="sr-only">добавить в избранное</span>
@@ -545,7 +574,7 @@
                             </div>
                         </article>
                     </li>
-                    <li class="products-page__item mix fruit">
+                    <li class="products-page__item">
                         <article class="product-card">
                             <span class="badge">
                                 <span class="badge__item badge__item--new">Новинка</span>

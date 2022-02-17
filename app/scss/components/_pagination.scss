@@ -1,8 +1,18 @@
 .pagination {
     display: flex;
 
-    &__item:not(:last-child) {
-        margin-right: 6px;
+    &__item {
+        &:not(:last-child) {
+            margin-right: 6px;
+        }
+
+        @media (max-width: 576px) {
+
+            &:nth-child(3),
+            &:nth-last-child(3) {
+                display: none;
+            }
+        }
     }
 
     &__link {

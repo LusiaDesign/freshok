@@ -10,30 +10,30 @@ $(function () {
     });
     $('.menu-btn').on('click', function () {
         $('.menu').addClass('active');
-        $('body').addClass('no-scroll--menu');
+        $('body').addClass('no-scroll--mobile');
         $('.basket').removeClass('active');
         $('body').removeClass('no-scroll');
     });
     $('.basket-btn--nav').on('click', function () {
         $('.basket').toggleClass('active');
         $('.menu').removeClass('active');
-        $('body').removeClass('no-scroll--menu');
+        $('body').removeClass('no-scroll--mobile');
         $('body').toggleClass('no-scroll');
         var w = $(window).width();
-        if (w <= 576) {
+        if (w <= 768) {
             $('body').removeClass('no-scroll');
             $('body').toggleClass('no-scroll--mobile');
         }
     });
     $('.close-btn').on('click', function () {
         $('body').removeClass('no-scroll');
-        $('body').removeClass('no-scroll--menu');
         $('body').removeClass('no-scroll--mobile');
         $('.menu').removeClass('active');
         $('.basket').removeClass('active');
+        $('.products-page__filters').removeClass('active');
     });
-    $('.products-page__filter-btn').on('click', function () {
-        $('.products-page__filter-btn').removeClass('active');
+    $('.products-page__toggle-btn').on('click', function () {
+        $('.products-page__toggle-btn').removeClass('active');
         $(this).addClass('active');
     });
     $('.btn-list').on('click', function () {
@@ -45,6 +45,10 @@ $(function () {
     $('.pagination__link').on('click', function () {
         $('.pagination__link').removeClass('active');
         $(this).addClass('active');
+    });
+    $('.products-page__filter-btn').on('click', function () {
+        $('.products-page__filters').toggleClass('active');
+        $('body').toggleClass('no-scroll--mobile');
     });
     $('.banner__wrapper').slick({
         prevArrow: '<button type="button" class="slick-arrow slick-prev"><span class="sr-only">Предыдущий слайд</span><svg width="19" height="32"><use xlink: href="../images/sprite.svg#icon-arrow-left"></use></svg></button>',
@@ -101,10 +105,65 @@ $(function () {
             $('.catalog-btn, .catalog__dropdown').removeClass('active');
         }
     });
+
     $('.product-card__input').styler();
-    $('.products-page__filter-sort').styler();
-    $('.filters__pol').ionRangeSlider({
-        type: "double"
+    $('.products-page__sort').styler();
+
+
+    var $range = $(".filters-price__input"),
+        $inputFrom = $(".filters-price__from"),
+        $inputTo = $(".filters-price__to"),
+        instance,
+        min = 0,
+        max = 1000,
+        from = 0,
+        to = 0;
+
+    $range.ionRangeSlider({
+        type: "double",
+        min: min,
+        max: max,
+        from: 100,
+        to: 1000,
+        onStart: updateInputs,
+        onChange: updateInputs
+    });
+    instance = $range.data("ionRangeSlider");
+
+    function updateInputs(data) {
+        from = data.from;
+        to = data.to;
+
+        $inputFrom.prop("value", from);
+        $inputTo.prop("value", to);
+    }
+
+    $inputFrom.on("input", function () {
+        var val = $(this).prop("value");
+
+        if (val < min) {
+            val = min;
+        } else if (val > to) {
+            val = to;
+        }
+
+        instance.update({
+            from: val
+        });
+    });
+
+    $inputTo.on("input", function () {
+        var val = $(this).prop("value");
+
+        if (val < from) {
+            val = from;
+        } else if (val > max) {
+            val = max;
+        }
+
+        instance.update({
+            to: val
+        });
     });
     var containerEl1 = document.querySelector('[data-ref="container-1"]');
     var containerEl2 = document.querySelector('[data-ref="container-2"]');

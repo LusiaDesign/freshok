@@ -38,17 +38,13 @@ svg {
     margin-right: calc(17px - (100vw - 100%));
 }
 
-.no-scroll--menu {
-    overflow: hidden;
-    margin-left: calc(17px - (100vw - 100%));
-}
-
 .no-scroll--mobile {
     overflow: hidden;
 }
 
 .no-scroll,
-.no-scroll--menu {
+.no-scroll--menu,
+.no-scroll--mobile {
     &::after {
         content: '';
         position: absolute;
@@ -57,6 +53,7 @@ svg {
         top: 160px;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
 
         @media (max-width: 768px) {
             top: 156px;
@@ -302,33 +299,90 @@ svg {
 }
 
 .jq-selectbox {
-    padding: 15px 45px 15px 11px;
-    position: relative;
-    border: 1px solid $silver-600;
-    border-radius: 3px;
-    color: $dark-500;
-    background-color: $white;
-    margin-right: 15px;
+    z-index: 0;
 
-    &::after {
-        content: '';
-        position: absolute;
-        top: 23px;
-        right: 15px;
-        background-image: url('../../images/sprite.svg#icon-chevron-up');
-        @extend %bg;
-        width: 11px;
-        height: 6px;
+    &__select {
+        padding: 15px 25px 15px 11px;
+        position: relative;
+        border: 1px solid $silver-600;
+        border-radius: 3px;
+        color: $dark-500;
+        background-color: $white;
+        margin-right: 15px;
+        width: 100%;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 23px;
+            right: 15px;
+            background-image: url('../../images/sprite.svg#icon-chevron-up');
+            @extend %bg;
+            width: 11px;
+            height: 6px;
+            opacity: 0.3;
+        }
+
+        &:focus {
+            box-shadow: 0px 0px 0px 3px $green-200;
+        }
+
+        &:hover {
+            border-color: $dark-500;
+        }
     }
 
     &.opened {
-        &::after {
-            transform: rotate(180deg);
+        .jq-selectbox__select {
+            border-color: $dark-500;
+            border-radius: 3px 3px 0px 0px;
+
+            &::after {
+                transform: rotate(180deg);
+            }
         }
     }
 
     &__dropdown {
-        padding: 15px 45px 15px 11px;
+        padding: 15px 9px;
         background-color: $white;
+        border: 1px solid $silver-600;
+        border-radius: 0px 0px 6px 6px;
+        width: 150px;
+        z-index: 2;
+
+        li {
+            padding-bottom: 15px;
+        }
     }
+}
+
+.irs--flat .irs-line {
+    top: 32px;
+    height: 2px;
+    background-color: #c4c4c4;
+    border-radius: 0;
+}
+
+.irs--flat .irs-bar {
+    top: 32px;
+    height: 2px;
+    background-color: $green-900;
+}
+
+.irs--flat .irs-handle {
+    top: 22px;
+    width: 18px;
+    height: 18px;
+    background-color: $green-900;
+    border-radius: 50%;
+}
+
+.irs--flat .irs-handle>i:first-child,
+.irs-to,
+.irs-from,
+.irs-single,
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+    display: none;
 }
