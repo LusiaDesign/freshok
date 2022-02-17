@@ -18,4 +18,21 @@
     &:active {
         background-color: rgba(193, 193, 193, 0.3);
     }
+
+    &--small {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 24px;
+        height: 24px;
+        padding: 1px;
+        color: $silver-600;
+
+        @media (max-width: 768px) {
+            top: 3px;
+            right: 3px;
+            width: 44px;
+            height: 44px;
+        }
+    }
 }
