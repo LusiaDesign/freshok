@@ -19,55 +19,55 @@
                     <form class="filters__form" action="#">
                         <label class="filters__label">
                             Овощи и фрукты
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="veg-fruit">
                         </label>
                         <label class="filters__label">
                             Бакалея
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="grocery">
                         </label>
                         <label class="filters__label">
                             Молочные продукты
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="milk-prod">
                         </label>
                         <label class="filters__label">
                             Хлеб
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="bread">
                         </label>
                         <label class="filters__label">
                             Мясо
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="meat">
                         </label>
                         <label class="filters__label">
                             Колбаса
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="sausage">
                         </label>
                         <label class="filters__label">
                             Рыба
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="fish">
                         </label>
                         <label class="filters__label">
                             Алкоголь
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="alko">
                         </label>
                         <label class="filters__label">
                             Напитки
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="drinks">
                         </label>
                         <label class="filters__label">
                             Торты
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="cake">
                         </label>
                         <label class="filters__label">
                             Чай, кофе
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="tea-coffee">
                         </label>
                         <label class="filters__label">
                             Торты
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="cake">
                         </label>
                         <label class="filters__label">
                             Чай, кофе
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="tea-coffee">
                         </label>
                     </form>
                 </div>
@@ -78,19 +78,19 @@
                             <use xlink:href="images/sprite.svg#icon-chevron-up"></use>
                         </svg>
                     </h3>
-                    <form class="filters__offer" action="">
+                    <form class="filters__offer" action="#">
                         <label class="filters__label">
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="sale">
                             <span class="filters__checkbox"></span>
                             Со скидкой
                         </label>
                         <label class="filters__label">
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="new">
                             <span class="filters__checkbox"></span>
                             Новинка
                         </label>
                         <label class="filters__label">
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="hit">
                             <span class="filters__checkbox"></span>
                             Хит
                         </label>
@@ -103,34 +103,34 @@
                             <use xlink:href="images/sprite.svg#icon-chevron-up"></use>
                         </svg>
                     </h3>
-                    <form class="filters__brands" action="">
+                    <form class="filters__brands" action="#">
                         <label class="filters__label">
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="cola">
                             <span class="filters__checkbox"></span>
                             CocaCola
                         </label>
                         <label class="filters__label">
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="pepsi">
                             <span class="filters__checkbox"></span>
                             Pepsi
                         </label>
                         <label class="filters__label">
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="sprite">
                             <span class="filters__checkbox"></span>
                             Sprite
                         </label>
                         <label class="filters__label">
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="fanta">
                             <span class="filters__checkbox"></span>
                             Fanta
                         </label>
                         <label class="filters__label">
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="red-bull">
                             <span class="filters__checkbox"></span>
                             RedBull
                         </label>
                         <label class="filters__label">
-                            <input class="filters__input" type="checkbox" name="">
+                            <input class="filters__input" type="checkbox" name="dr-pepper">
                             <span class="filters__checkbox"></span>
                             Dr Pepper
                         </label>
@@ -143,26 +143,34 @@
                             <use xlink:href="images/sprite.svg#icon-chevron-up"></use>
                         </svg>
                     </h3>
-                    <form class="filters-price__form" action="">
+                    <form class="filters-price__form" action="#">
+                        <span class="filters-price__wrap">
+                            <span class="filters-price__box">
+                                от
+                                <span class="sr-only">поле для ввода</span>
+                                <label class="filters-price__label">
+                                    <input class="filters-price__inner filters-price__from" type="number" value="0"
+                                        name="price-from">
+                                </label>
+                                <svg width="10" height="16">
+                                    <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                </svg>
+                            </span>
+                            <span class="filters-price__box">
+                                до
+                                <span class="sr-only">поле для ввода</span>
+                                <label class="filters-price__label">
+                                    <input class="filters-price__inner filters-price__to" type="number" value="0"
+                                        name="price-to">
+                                </label>
+                                <svg width="10" height="16">
+                                    <use xlink:href="images/sprite.svg#icon-rub"></use>
+                                </svg>
+                            </span>
+                        </span>
                         <label class="filters-price__label">
-                            <div class="filters-price__wrap">
-                                <span class="filters-price__box">
-                                    от
-                                    <input class="filters-price__inner filters-price__from" type="text" value="0">
-                                    <svg width="10" height="16">
-                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                    </svg>
-                                </span>
-                                <span class="filters-price__box">
-                                    до
-                                    <input class="filters-price__inner filters-price__to" type="text" value="0">
-                                    <svg width="10" height="16">
-                                        <use xlink:href="images/sprite.svg#icon-rub"></use>
-                                    </svg>
-                                    </input>
-                            </div>
-                            <input class="filters-price__input" type="text" data-min="0" data-max="1000" data-from="100"
-                                data-to="1000" value="">
+                            <input class="filters-price__input" type="range" data-min="0" data-max="1000"
+                                data-from="100" data-to="1000" value="" name="value">
                         </label>
                     </form>
                 </div>
@@ -631,6 +639,7 @@
                     <ul class="products-page__pagination pagination">
                         <li class="pagination__item">
                             <a class="pagination__link pagination__arrow pagination__arrow--prev disable" href="#">
+                                <span class="sr-only">перейти к следующей странице</span>
                                 <svg width="11" height="18">
                                     <use xlink:href="images/sprite.svg#icon-chevron"></use>
                                 </svg>
@@ -653,6 +662,7 @@
                         </li>
                         <li class="pagination__item">
                             <a class="pagination__link pagination__arrow" href="#">
+                                <span class="sr-only">перейти к предыдущей странице</span>
                                 <svg width="11" height="18">
                                     <use xlink:href="images/sprite.svg#icon-chevron"></use>
                                 </svg>

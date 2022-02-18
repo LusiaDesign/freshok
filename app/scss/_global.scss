@@ -43,7 +43,6 @@ svg {
 }
 
 .no-scroll,
-.no-scroll--menu,
 .no-scroll--mobile {
     &::after {
         content: '';
@@ -52,8 +51,9 @@ svg {
         right: 0;
         top: 160px;
         bottom: 0;
+        height: 200%;
         background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1;
+        z-index: 2;
 
         @media (max-width: 768px) {
             top: 156px;
@@ -299,7 +299,7 @@ svg {
 }
 
 .jq-selectbox {
-    z-index: 0;
+    z-index: 2;
 
     &__select {
         padding: 15px 25px 15px 11px;
@@ -321,6 +321,10 @@ svg {
             width: 11px;
             height: 6px;
             opacity: 0.3;
+
+            @media (max-width: 576px) {
+                right: 6px;
+            }
         }
 
         &:focus {
@@ -330,9 +334,15 @@ svg {
         &:hover {
             border-color: $dark-500;
         }
+
+        @media (max-width: 576px) {
+            font-size: 12px;
+            padding: 15px 6px;
+        }
     }
 
     &.opened {
+
         .jq-selectbox__select {
             border-color: $dark-500;
             border-radius: 3px 3px 0px 0px;
@@ -348,11 +358,14 @@ svg {
         background-color: $white;
         border: 1px solid $silver-600;
         border-radius: 0px 0px 6px 6px;
-        width: 150px;
-        z-index: 2;
 
         li {
             padding-bottom: 15px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 12px;
+            padding: 15px 6px;
         }
     }
 }

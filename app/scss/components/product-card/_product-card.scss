@@ -230,42 +230,4 @@
             justify-content: start;
         }
     }
-
-    &.list {
-        display: flex;
-        max-width: 466px;
-        padding: 0;
-
-        .product-card__link {
-            margin-top: 6px;
-        }
-
-        .product-card__img {
-            width: 200px;
-            height: 140px;
-        }
-
-        .product-card__chosen-btn {
-            top: 57px;
-            right: 11px;
-        }
-
-        .product-card__wrapper {
-            padding: 12px 18px;
-        }
-
-        .badge {
-            top: 2px;
-            left: 6px;
-        }
-
-        .product-card__wrap {
-            margin-bottom: 12px;
-        }
-
-        .product-card__title {
-            padding-right: 50px;
-            margin-bottom: 13px;
-        }
-    }
 }

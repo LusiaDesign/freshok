@@ -84,23 +84,19 @@
             &::before {
                 content: '';
                 position: absolute;
-                width: 105%;
+                width: 103%;
                 height: 1px;
                 background-color: rgba(255, 255, 255, 0.1);
-
-                @media (max-width: 576px) {
-                    width: 110%;
-                }
             }
 
             &::before {
                 top: 0;
-                right: -15px;
+                right: -10px;
             }
 
             &::after {
                 bottom: 0;
-                left: -15px;
+                left: -10px;
             }
         }
 
