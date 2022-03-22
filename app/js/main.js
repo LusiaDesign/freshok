@@ -2,6 +2,10 @@ $(function () {
     $('.catalog-btn').on('click', function () {
         $('.catalog-btn, .catalog__dropdown').toggleClass('active');
     });
+    $('.catalog__link').on('click', function () {
+        $('.catalog-btn, .catalog__dropdown, .catalog__dropdown--menu, .menu').removeClass('active');
+        $('body').removeClass('no-scroll--mobile');
+    });
     $('.catalog-btn--menu').on('click', function () {
         $('.catalog__dropdown--menu').toggleClass('active');
     });
@@ -11,18 +15,24 @@ $(function () {
     $('.menu-btn').on('click', function () {
         $('.menu').addClass('active');
         $('body').addClass('no-scroll--mobile');
-        $('.basket').removeClass('active');
         $('body').removeClass('no-scroll');
+        $('.basket').removeClass('active');
+    });
+    $('.menu__link').on('click', function () {
+        $('.menu').removeClass('active');
+        $('body').removeClass('no-scroll--mobile');
     });
     $('.basket-btn--nav').on('click', function () {
-        $('.basket').addClass('active');
-        $('.menu').removeClass('active');
+        $('.basket').toggleClass('active');
         $('body').removeClass('no-scroll--mobile');
         $('body').toggleClass('no-scroll');
         var w = $(window).width();
         if (w <= 768) {
             $('body').removeClass('no-scroll');
             $('body').addClass('no-scroll--mobile');
+        }
+        if (w <= 576) {
+            $('body').removeClass('no-scroll--mobile');
         }
     });
     $('.close-btn').on('click', function () {
@@ -49,6 +59,14 @@ $(function () {
     $('.products-page__filter-btn').on('click', function () {
         $('.products-page__filters').toggleClass('active');
         $('body').toggleClass('no-scroll--mobile');
+    });
+    $('.filters__title').on('click', function () {
+        $(this).siblings().slideToggle();
+        $(this).toggleClass('active');
+    });
+    $(window).scroll(function () {
+        $('.search').removeClass('active');
+        $('.catalog-btn, .catalog__dropdown').removeClass('active');
     });
     $('.banner__wrapper').slick({
         prevArrow: '<button type="button" class="slick-arrow slick-prev"><span class="sr-only">Предыдущий слайд</span><svg width="19" height="32"><use xlink: href="../images/sprite.svg#icon-arrow-left"></use></svg></button>',
@@ -110,9 +128,9 @@ $(function () {
     $('.products-page__sort').styler();
 
 
-    var $range = $(".filters-price__input"),
-        $inputFrom = $(".filters-price__from"),
-        $inputTo = $(".filters-price__to"),
+    var $range = $(".filters__range"),
+        $inputFrom = $(".filters__from"),
+        $inputTo = $(".filters__to"),
         instance,
         min = 0,
         max = 1000,

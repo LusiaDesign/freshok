@@ -81,10 +81,11 @@
                                 </li>
                             </ul>
                             <address class="connection connection--menu">
-                                <ul class="connection__inner">
+                                <ul class="connection__inner connection__inner--menu">
                                     <li class="connection__item">
-                                        <a class="connection__link connection__link--phone" href="tel:+7907288365">
-                                            <svg class="connection__icon connection__icon--phone" width="25"
+                                        <a class="connection__link connection__link--phone state"
+                                            href="tel:+7907288365">
+                                            <svg class="connection__icon connection__icon--phone" width="24"
                                                 height="24">
                                                 <use xlink:href="images/sprite.svg#icon-tell"></use>
                                             </svg>
@@ -92,8 +93,8 @@
                                         </a>
                                     </li>
                                     <li class="connection__item">
-                                        <a class="connection__link" href="#">
-                                            <svg class="connection__icon" width="25" height="33">
+                                        <a class="connection__link state" href="#">
+                                            <svg class="connection__icon" width="24" height="33">
                                                 <use xlink:href="images/sprite.svg#icon-nav"></use>
                                             </svg>
                                             Санкт-Петербург, ул. Ленина, 1
@@ -102,7 +103,7 @@
                                 </ul>
                                 <ul class="social">
                                     <li class="social__item">
-                                        <a class="social__link social__link--menu" href="#" target="_blank">
+                                        <a class="social__link social__link--menu state" href="#" target="_blank">
                                             <span class="sr-only">Фейсбук</span>
                                             <svg width="32" height="32">
                                                 <use xlink:href="images/sprite.svg#icon-facebook"></use>
@@ -110,7 +111,7 @@
                                         </a>
                                     </li>
                                     <li class="social__item">
-                                        <a class="social__link social__link--menu" href="#" target="_blank">
+                                        <a class="social__link social__link--menu state" href="#" target="_blank">
                                             <span class="sr-only">Ютюб</span>
                                             <svg width="32" height="32">
                                                 <use xlink:href="images/sprite.svg#icon-youtube"></use>
@@ -118,7 +119,7 @@
                                         </a>
                                     </li>
                                     <li class="social__item">
-                                        <a class="social__link social__link--menu" href="#" target="_blank">
+                                        <a class="social__link social__link--menu state" href="#" target="_blank">
                                             <span class="sr-only">Телеграм</span>
                                             <svg width="32" height="32">
                                                 <use xlink:href="images/sprite.svg#icon-telegram"></use>
@@ -126,7 +127,7 @@
                                         </a>
                                     </li>
                                     <li class="social__item">
-                                        <a class="social__link social__link--menu" href="#" target="_blank">
+                                        <a class="social__link social__link--menu state" href="#" target="_blank">
                                             <span class="sr-only">Инстаграм</span>
                                             <svg width="32" height="32">
                                                 <use xlink:href="images/sprite.svg#icon-instagram"></use>
@@ -138,29 +139,29 @@
                             <nav class="menu__nav">
                                 <ul class="menu__list">
                                     <li class="menu__item">
-                                        <a class="menu__link" href="#">Доставка</a>
+                                        <a class="menu__link state" href="#">Доставка</a>
                                     </li>
                                     <li class="menu__item">
-                                        <a class="menu__link" href="#">О нас</a>
+                                        <a class="menu__link state" href="#">О нас</a>
                                     </li>
                                     <li class="menu__item">
-                                        <a class="menu__link" href="#">Новости</a>
+                                        <a class="menu__link state" href="#">Новости</a>
                                     </li>
                                     <li class="menu__item">
-                                        <a class="menu__link" href="#">Контакты</a>
+                                        <a class="menu__link state" href="#">Контакты</a>
                                     </li>
                                     <li class="menu__item">
-                                        <a class="menu__link" href="#">Акции</a>
+                                        <a class="menu__link state" href="#">Акции</a>
                                     </li>
                                     <li class="menu__item">
-                                        <a class="menu__link" href="#">Вакансии</a>
+                                        <a class="menu__link state" href="#">Вакансии</a>
                                     </li>
 
                                     <li class="menu__item">
-                                        <a class="menu__link" href="#">Отзывы</a>
+                                        <a class="menu__link state" href="#">Отзывы</a>
                                     </li>
                                     <li class="menu__item">
-                                        <a class="menu__link" href="#">Публичная оферта</a>
+                                        <a class="menu__link state" href="#">Публичная оферта</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -197,7 +198,7 @@
         <div class="nav__bottom">
             <div class="container">
                 <div class="nav__inner">
-                    <a class="nav__logo logo" href="products-page.html">
+                    <a class="nav__logo logo" href="#">
                         <img class="logo__dekstop" src="images/logo.svg" width="200" height="60"
                             alt="Логотип магазина Фрешок">
                         <img class="logo__mobile" src="images/logo-short.svg" width="37" height="40"
@@ -265,7 +266,7 @@
                         <li class="nav__items">
                             <button class="nav__search-btn search-btn" type="button">
                                 <span class="sr-only">поиск</span>
-                                <svg width="32" height="32">
+                                <svg class="nav__icon" width="32" height="32">
                                     <use xlink:href="images/sprite.svg#icon-search-mobile"></use>
                                 </svg>
                             </button>
@@ -281,7 +282,7 @@
                         <li class="nav__items">
                             <button class="chosen-btn chosen-btn--nav" type="button">
                                 <span class="sr-only">избранные товары</span>
-                                <svg width="32" height="32">
+                                <svg class="nav__icon" width="32" height="32">
                                     <use xlink:href="images/sprite.svg#icon-heart"></use>
                                 </svg>
                                 <span class="counter">12</span>
@@ -290,7 +291,7 @@
                         <li class="nav__items">
                             <button class="basket-btn basket-btn--nav" type="button">
                                 <span class="sr-only">корзина товаров</span>
-                                <svg width="32" height="32">
+                                <svg class="nav__icon" width="32" height="32">
                                     <use xlink:href="images/sprite.svg#icon-basket"></use>
                                 </svg>
                                 <span class="counter">12</span>

@@ -23,10 +23,28 @@
         }
     }
 
+    &--products-page {
+        .product-card__wrapper {
+            padding-top: 0;
+        }
+    }
+
     &__chosen-btn {
         position: absolute;
         right: 5px;
         top: 10px;
+
+        @media (max-width: 576px) {
+            right: 0;
+            top: 11px;
+        }
+    }
+
+    &__icon {
+        @media (max-width: 576px) {
+            width: 24px;
+            height: 22px;
+        }
     }
 
     &__link {
@@ -90,12 +108,20 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: end;
         padding: 18px;
         text-align: left;
 
+        @media (max-width: 576px) {
+            padding: 15px 12px 12px;
+        }
+
         &--stock {
             padding: 0;
+
+            @media (max-width: 576px) {
+                padding: 0;
+            }
         }
     }
 
@@ -154,11 +180,18 @@
         font-size: 14px;
         line-height: 1.4;
         width: 100%;
-        margin-bottom: 10px;
         min-height: 4.2em;
+
+        @media (max-width: 576px) {
+            margin-bottom: 48px;
+        }
 
         &--stock {
             margin-bottom: 7px;
+
+            @media (max-width: 576px) {
+                margin-bottom: 5px;
+            }
         }
 
         &--basket {
@@ -175,6 +208,10 @@
         text-transform: uppercase;
         margin-bottom: 5px;
         width: 100%;
+
+        @media (max-width: 576px) {
+            font-size: 8px;
+        }
 
         &--in {
             color: $green-900;
@@ -194,11 +231,20 @@
         font-weight: 700;
         line-height: 1;
         color: $dark-500;
+
+        @media (max-width: 576px) {
+            font-size: 10px;
+        }
     }
 
     &__stars-icon {
         fill: $yellow-900;
         margin-bottom: -2px;
+
+        @media (max-width: 576px) {
+            width: 12px;
+            height: 12px;
+        }
     }
 
     &--stock,
@@ -216,6 +262,12 @@
                     display: none;
                 }
             }
+        }
+    }
+
+    &--stock {
+        @media (max-width: 576px) {
+            padding-bottom: 10px;
         }
     }
 

@@ -31,4 +31,8 @@
             background-color: $red-900;
         }
     }
+
+    @media (max-width: 576px) {
+        top: 8px;
+    }
 }

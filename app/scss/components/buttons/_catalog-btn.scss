@@ -11,7 +11,7 @@
     width: 240px;
 
     &.active {
-        border-radius: 6px 6px 0px 0px;
+        border-radius: 6px 6px 0 0;
 
         .catalog-btn__arrow {
             transform: rotate(180deg);
@@ -30,20 +30,22 @@
         display: block;
         text-align: left;
         width: 100%;
+        font-weight: 600;
         font-size: 18px;
         line-height: 1;
+        letter-spacing: 0.03em;
         color: $dark-800;
         padding: 14px 0;
         border-radius: 0;
         margin-bottom: 18px;
 
         &:focus {
-            box-shadow: inset 0px 0px 0px 3px $green-100;
+            box-shadow: inset 0 0 0 3px $green-100;
         }
     }
 
     &__icon {
-        margin-right: 16px;
+        margin-right: 11px;
         margin-bottom: -3px;
     }
 }

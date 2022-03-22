@@ -3,6 +3,10 @@
     &__top {
         background-color: $dark-800;
         padding: 14px 0;
+
+        @media (max-width: 576px) {
+            padding: 3px 0;
+        }
     }
 
     &__menu {
@@ -23,6 +27,10 @@
 
         &--menu {
             display: none;
+
+            @media (max-width: 768px) {
+                margin-right: auto;
+            }
         }
 
         &--thumb {
@@ -31,10 +39,18 @@
             @media (max-width: 992px) {
                 margin-right: 24px;
             }
+
+            @media (max-width: 768px) {
+                margin-right: 6px;
+            }
         }
 
         &--indent {
             margin-right: auto;
+
+            @media (max-width: 768px) {
+                margin-right: 0;
+            }
         }
 
         @media (max-width: 768px) {
@@ -44,24 +60,7 @@
             &--thumb,
             &--indent {
                 display: block;
-            }
 
-            &--menu {
-                margin-right: auto;
-            }
-
-            &--thumb {
-                margin-right: 24px;
-            }
-
-            &--indent {
-                margin-right: 0;
-            }
-        }
-
-        @media (max-width: 576px) {
-            &--mobile {
-                display: none;
             }
         }
     }
@@ -79,7 +78,7 @@
         }
 
         &:focus {
-            box-shadow: 0px 0px 0px 3px $green-100;
+            box-shadow: 0 0 0 3px $green-100;
         }
 
         &:active {
@@ -109,7 +108,7 @@
         padding: 25px 0;
 
         @media (max-width: 768px) {
-            padding: 12px 0;
+            padding: 10px 0;
         }
     }
 
@@ -128,7 +127,26 @@
         display: flex;
     }
 
-    &__items:not(:last-child) {
-        margin-right: 12px;
+    &__items {
+        &--mobile {
+            @media (max-width: 576px) {
+                display: none;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 12px;
+
+            @media (max-width: 576px) {
+                margin-right: 8px;
+            }
+        }
+    }
+
+    &__icon {
+        @media (max-width: 576px) {
+            width: 24px;
+            height: 24px;
+        }
     }
 }

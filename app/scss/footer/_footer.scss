@@ -13,7 +13,7 @@
         display: flex;
         align-items: start;
         justify-content: space-between;
-        margin: 30px 0 25px 0;
+        margin: 30px 0 17px 0;
 
         @media (max-width: 1200px) {
             text-align: left;
@@ -25,6 +25,10 @@
         @media (max-width: 768px) {
             max-width: 100%;
             justify-content: center;
+        }
+
+        @media (max-width: 576px) {
+            margin-top: 20px;
         }
     }
 
@@ -103,6 +107,7 @@
         @media (max-width: 576px) {
             column-count: 2;
             padding-left: 40px;
+            padding-bottom: 10px;
         }
     }
 
@@ -151,6 +156,10 @@
 
     &__thumb:not(:last-child) {
         margin-right: 24px;
+
+        @media (max-width: 576px) {
+            margin-bottom: 20px;
+        }
     }
 
     @media (max-width: 1200px) {

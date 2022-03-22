@@ -1,6 +1,12 @@
 .connection {
     color: $white;
 
+    &__inner {
+        &--menu {
+            margin-bottom: 11px;
+        }
+    }
+
     &__item {
         margin-bottom: 18px;
 
@@ -15,7 +21,7 @@
         font-size: 18px;
         line-height: 1.2;
         color: $dark-800;
-        padding: 18px 0;
+        padding: 7px 0;
         width: 100%;
 
         @media (max-width: 768px) {
@@ -28,9 +34,10 @@
     }
 
     &__icon {
-        margin-right: 12px;
+        margin-right: 19px;
 
         &--phone {
+            margin-right: 9px;
             margin-bottom: -4px;
         }
     }
@@ -44,6 +51,6 @@
     }
 
     &--menu {
-        margin-bottom: 10px;
+        margin-bottom: 18px;
     }
 }

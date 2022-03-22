@@ -8,6 +8,10 @@
 
         &--bg-1 {
             background-image: url('../../images/banner/bg-swiper-carrot.jpg');
+
+            @media (max-width: 576px) {
+                background-image: url('../../images/banner/bg-carrot-s.jpg');
+            }
         }
 
         &--bg-2 {
@@ -21,14 +25,14 @@
 
     &__container {
         display: flex;
-        min-height: calc(100vh - 310px);
+        min-height: calc(100vh - 333px);
 
         @media (max-width: 768px) {
             min-height: calc(100vh - 380px);
         }
 
         @media (max-width: 576px) {
-            min-height: calc(100vh - 400px);
+            min-height: calc(100vh - 495px);
         }
     }
 
