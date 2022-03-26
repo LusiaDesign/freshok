@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "gulp-cheerio": "^1.0.0",
-    "gulp-sass": "^5.1.0"
+    "gulp-sass": "^5.1.0",
+    "rateyo": "^2.3.5"
   },
   "devDependencies": {
     "browser-sync": "^2.27.7",
