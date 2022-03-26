@@ -1,5 +1,5 @@
 <section class="product-tabs section">
-    <div class="container--min">
+    <div class="container container--min">
         <h2 class="sr-only">Подробное описание товара, отзывы покупателей</h2>
         <div class="product-tabs__top">
             <a class="product-tabs__link active" href="#tab-1">Описание</a>
@@ -58,18 +58,60 @@
                 <h3 class="comment__title">Мнение наших клиентов</h3>
                 <ul class="comment__list">
                     <li class="comment__item">
+                        <img class="comment__img" src="../../images/userpic/bg-img.jpg" alt="Андрей" width="70"
+                            height="70">
+                        <cite class="comment__author">
+                            Андрей
+                            <time class="comment__meta" datetime="10.06.21">10.06.2021</time>
+                        </cite>
+                        <div class="stars" data-rateyo-rating="4"></div>
                         <blockquote class="comment__guote">
-                            <img class="comment__img" src="../../images/userpic/bg-img.jpg" alt="Андрей" width="70"
-                                height="70">
-                            <cite class="comment__author">
-                                Андрей
-                                <time class="comment__meta" datetime="10.06.21">10.06.2021</time>
-                            </cite>
-                            <div class="stars" data-rateyo-rating="4"></div>
                             Яркий цвет, нежный вкус. Очень свежий и приятный, буду пробовать еще!))
                         </blockquote>
                     </li>
+                    <li class="comment__item">
+                        <img class="comment__img" src="../../images/userpic/bg-img2.jpg" alt="Екатерина Белая"
+                            width="70" height="70">
+                        <cite class="comment__author">
+                            Екатерина Белая
+                            <time class="comment__meta" datetime="7.06.21">7.06.2021</time>
+                        </cite>
+                        <div class="stars" data-rateyo-rating="5"></div>
+                        <blockquote class="comment__guote">
+                            Цвет, конечно, очень насыщенный! Ожидаешь, что и вкус будет такой же яркий (просто взрыв),
+                            но нет. Вкус "сдержанно-сладкий" и очень-очень свежий! Рад, что есть такая возможность -
+                            пробовать экзотические фрукты.
+                        </blockquote>
+                    </li>
                 </ul>
+                <h3 class="comment__title">Оставить отзыв</h3>
+                <form class="form" action="#" method="get">
+                    <label class="form__label form__label--stars">
+                        Ваша оценка *
+                        <input class="form__field form__field--stars" type="radio" name="Рейтинг" required>
+                    </label>
+                    <label class="form__label form__label--textarea">
+                        Ваш отзыв *
+                        <textarea class="form__field form__field--textarea" name="Отзыв"
+                            placeholder="Введите текст отзыва" required></textarea>
+                    </label>
+                    <div class="form__inner">
+                        <label class="form__label">
+                            Имя
+                            <input class="form__field" type="text" name="Имя" placeholder="Введите ваше имя">
+                        </label>
+                        <label class="form__label">
+                            Email *
+                            <input class="form__field" type="email" name="email" placeholder="youremail@mail.com"
+                                required>
+                        </label>
+                    </div>
+                    <label class="form__label form__label--checkbox">
+                        <input class="form__field form__field--checkbox" type="checkbox" name="Сохранить">
+                        Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
+                    </label>
+                    <button class="button" type="submit">Оставить отзыв</button>
+                </form>
             </div>
         </div>
 </section>

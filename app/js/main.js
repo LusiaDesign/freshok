@@ -67,7 +67,8 @@ $(function () {
         $(this).siblings().slideToggle();
         $(this).toggleClass('active');
     });
-    $('.product-tabs__link').on('click', function () {
+    $('.product-tabs__link').on('click', function (e) {
+        e.preventDefault();
         $('.product-tabs__link').removeClass('active');
         $(this).addClass('active');
         $('.product-tabs__item').removeClass('active');
