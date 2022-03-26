@@ -1,0 +1,52 @@
+.product-tabs {
+    padding-top: 0;
+
+    &__top {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    &__link {
+        display: inline-block;
+        font-family: 'Ruda';
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        text-transform: uppercase;
+        padding-top: 18px;
+
+        &.active {
+            position: relative;
+            color: $green-900;
+
+            &::after {
+                content: '';
+                position: absolute;
+                height: 3px;
+                left: 0;
+                right: 0;
+                top: 0;
+                width: 100%;
+                background-color: currentColor;
+            }
+        }
+    }
+
+    &__item {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+        p:not(:last-child) {
+            font-size: 16px;
+            line-height: 1.6;
+            letter-spacing: normal;
+            margin-bottom: 28px;
+            color: #4F4F4F;
+        }
+    }
+}

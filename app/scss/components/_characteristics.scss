@@ -1,0 +1,18 @@
+.characteristics {
+    &__item {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.6;
+        color: $dark-500;
+        letter-spacing: normal;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__info {
+        font-weight: 400;
+    }
+
+}

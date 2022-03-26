@@ -67,6 +67,12 @@ $(function () {
         $(this).siblings().slideToggle();
         $(this).toggleClass('active');
     });
+    $('.product-tabs__link').on('click', function () {
+        $('.product-tabs__link').removeClass('active');
+        $(this).addClass('active');
+        $('.product-tabs__item').removeClass('active');
+        $($(this).attr('href')).addClass('active');
+    });
     $(window).scroll(function () {
         $('.search').removeClass('active');
         $('.catalog-btn, .catalog__dropdown').removeClass('active');

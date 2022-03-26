@@ -1,23 +1,21 @@
-<div class="product-tabs">
+<section class="product-tabs section">
     <div class="container--min">
-        <ul class="product-tabs__top">
-            <li class="product-tabs__item">
-                <a class="product-tabs__link" href="#">Описание</a>
-            </li>
-            <li class="product-tabs__item">
-                <a class="product-tabs__link" href="#">Характеристики</a>
-            </li>
-            <li class="product-tabs__item">
-                <a class="product-tabs__link" href="#">Отзывы (2)</a>
-            </li>
-        </ul>
+        <h2 class="sr-only">Подробное описание товара, отзывы покупателей</h2>
+        <div class="product-tabs__top">
+            <a class="product-tabs__link active" href="#tab-1">Описание</a>
+            <a class="product-tabs__link" href="#tab-2">Характеристики</a>
+            <a class="product-tabs__link" href="#tab-3">Отзывы (2)</a>
+        </div>
         <div class="product-tabs__content">
-            <div class="product-tabs__description">
+            <div class="product-tabs__item active" id="tab-1">
                 <p>
-                    Питахайя – это источник питательных веществ и витаминов. Содержит витамин С, который способствует
-                    укреплению иммунной системы. В составе питайи много клетчатки, она благотворно влияет на работу ЖКТ.
+                    Питахайя – это источник питательных веществ и витаминов. Содержит витамин С, который
+                    способствует
+                    укреплению иммунной системы. В составе питайи много клетчатки, она благотворно влияет на работу
+                    ЖКТ.
                     Оказывает противовоспалительное действие, так как фрукт богат антиоксидантами. При употреблении
-                    питахайи, понижается уровень сахара в крови, улучшается зрение и работа сердечно–сосудистой системы.
+                    питахайи, понижается уровень сахара в крови, улучшается зрение и работа сердечно–сосудистой
+                    системы.
                     Так как фрукт низкокалорийный и состоит на 90% из воды, способствует снижению веса.
                 </p>
                 <p>
@@ -30,12 +28,48 @@
                     Внешний вид товара может отличаться от изображений, представленных на сайте.
                 </p>
             </div>
-            <div class="product-tabs__characteristics">
-
-            </div>
-            <div class="product-tabs__reviews">
-
+            <ul class="product-tabs__item product-characteristics" id="tab-2">
+                <li class="characteristics__item">
+                    Вес:
+                    <span class="characteristics__info">250-350 г;</span>
+                </li>
+                <li class="characteristics__item">
+                    Калорийность (на 100г):
+                    <span class="characteristics__info">50 ккал;</span>
+                </li>
+                <li class="characteristics__item">
+                    Условия хранения:
+                    <span class="characteristics__info">температура от +3 до +8;</span>
+                </li>
+                <li class="characteristics__item">
+                    Другие названия:
+                    <span class="characteristics__info">Драконов фрукт, Глаз дракона;</span>
+                </li>
+                <li class="characteristics__item">
+                    Страна происхождения:
+                    <span class="characteristics__info">Вьетнам;</span>
+                </li>
+                <li class="characteristics__item">
+                    Срок хранения:
+                    <span class="characteristics__info">до 5 дней.</span>
+                </li>
+            </ul>
+            <div class="product-tabs__item comment" id="tab-3">
+                <h3 class="comment__title">Мнение наших клиентов</h3>
+                <ul class="comment__list">
+                    <li class="comment__item">
+                        <blockquote class="comment__guote">
+                            <img class="comment__img" src="../../images/userpic/bg-img.jpg" alt="Андрей" width="70"
+                                height="70">
+                            <cite class="comment__author">
+                                Андрей
+                                <time class="comment__meta" datetime="10.06.21">10.06.2021</time>
+                            </cite>
+                            <div class="stars" data-rateyo-rating="4"></div>
+                            Яркий цвет, нежный вкус. Очень свежий и приятный, буду пробовать еще!))
+                        </blockquote>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-</div>
+</section>
