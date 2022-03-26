@@ -15,11 +15,17 @@
         }
     }
 
+    &--specification {
+        display: inline-block;
+        margin-bottom: 58px;
+    }
+
     &__item {
         color: $dark-500;
         line-height: 1;
 
-        &--old {
+        &--old,
+        &--specific-old {
             position: relative;
             color: $silver-600;
 
@@ -43,6 +49,24 @@
                 margin-bottom: -2px;
                 margin-left: -6px;
             }
+        }
+
+        &--specific-old {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 1;
+            margin-right: 18px;
+
+            &::before {
+                bottom: 10px;
+            }
+        }
+
+        &--specific-actual {
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 1;
+            color: $green-900;
         }
     }
 

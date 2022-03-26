@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "gulp-cheerio": "^1.0.0",
     "gulp-sass": "^5.1.0",
     "rateyo": "^2.3.5"

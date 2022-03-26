@@ -1,4 +1,7 @@
 $(function () {
+    $(".stars").rateYo({
+        starWidth: "16px"
+    });
     $('.catalog-btn').on('click', function () {
         $('.catalog-btn, .catalog__dropdown').toggleClass('active');
     });
@@ -68,6 +71,7 @@ $(function () {
         $('.search').removeClass('active');
         $('.catalog-btn, .catalog__dropdown').removeClass('active');
     });
+
     $('.banner__wrapper').slick({
         prevArrow: '<button type="button" class="slick-arrow slick-prev"><span class="sr-only">Предыдущий слайд</span><svg width="19" height="32"><use xlink: href="../images/sprite.svg#icon-arrow-left"></use></svg></button>',
         nextArrow: '<button type="button" class="slick-arrow slick-next"><span class="sr-only">Следующий слайд</span><svg width="19" height="32"><use xlink: href="../images/sprite.svg#icon-arrow-next"></use></svg></button>',
@@ -116,6 +120,12 @@ $(function () {
             }
         ]
     });
+    $('.product-card__items').slick({
+        prevArrow: '<button type="button" class="slick-arrow slick-prev"><span class="sr-only">Предыдущий слайд</span><svg width="19" height="32"><use xlink: href="../images/sprite.svg#icon-arrow-left"></use></svg></button>',
+        nextArrow: '<button type="button" class="slick-arrow slick-next"><span class="sr-only">Следующий слайд</span><svg width="19" height="32"><use xlink: href="../images/sprite.svg#icon-arrow-next"></use></svg></button>',
+        infinite: false,
+        fade: true,
+    });
     $(document).mouseup(function (e) {
         var block = $('.catalog');
         if (!block.is(e.target) &&
@@ -126,7 +136,6 @@ $(function () {
 
     $('.product-card__input').styler();
     $('.products-page__sort').styler();
-
 
     var $range = $(".filters__range"),
         $inputFrom = $(".filters__from"),
@@ -194,5 +203,4 @@ $(function () {
 
     var mixer1 = mixitup(containerEl1, config);
     var mixer2 = mixitup(containerEl2, config);
-
 })

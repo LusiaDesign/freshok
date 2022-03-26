@@ -38,6 +38,11 @@
 
         &--menu {
             color: $dark-800;
+
+            &:focus {
+                color: $green-900;
+                box-shadow: none;
+            }
         }
 
         @media (max-width: 768px) {

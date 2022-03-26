@@ -43,4 +43,22 @@
             color: rgba(255, 255, 255, 0.5);
         }
     }
+
+    &--specification {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        padding: 14px 12px;
+        height: 44px;
+        width: auto;
+        margin-right: auto;
+    }
+
+    &__icon {
+        margin-right: 12px;
+    }
 }

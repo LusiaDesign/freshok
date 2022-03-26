@@ -5,6 +5,15 @@
     left: 12px;
     z-index: 1;
 
+    @media (max-width: 576px) {
+        top: 8px;
+    }
+
+    &--specification {
+        display: inline-block;
+        margin-bottom: 22px;
+    }
+
     &__item {
         display: inline-block;
         line-height: 1;
@@ -30,9 +39,10 @@
         &--sale {
             background-color: $red-900;
         }
-    }
 
-    @media (max-width: 576px) {
-        top: 8px;
+        &--specification {
+            font-size: 16px;
+            padding: 6px 9px;
+        }
     }
 }
