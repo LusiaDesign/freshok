@@ -42,6 +42,11 @@
             letter-spacing: normal;
         }
 
+        &:focus {
+            border: 1px solid $green-900;
+            box-shadow: 0 0 0 3px $green-200;
+        }
+
         &--stars {
             margin-top: 0;
             margin-left: 18px;

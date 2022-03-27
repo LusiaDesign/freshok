@@ -20,6 +20,7 @@
         &.active {
             position: relative;
             color: $green-900;
+            opacity: 1;
 
             &::after {
                 content: '';
@@ -31,6 +32,10 @@
                 width: 100%;
                 background-color: currentColor;
             }
+        }
+
+        &:hover {
+            color: $green-900;
         }
     }
 
