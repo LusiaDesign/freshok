@@ -617,10 +617,41 @@
                 </ul>
                 <h3 class="comment__title">Оставить отзыв</h3>
                 <form class="form" action="#" method="get">
-                    <label class="form__label form__label--stars">
+                    <div class="form__label rating-stars">
                         Ваша оценка *
-                        <input class="form__field form__field--stars" type="radio" name="Рейтинг" required>
-                    </label>
+                        <div class="rating-stars__inner">
+                            <label class="rating-stars__label">
+                                <svg width="16" height="16">
+                                    <use xlink:href="images/sprite.svg#icon-stars"></use>
+                                </svg>
+                                <input class="rating-stars__item stars-5" type="radio" name="Рейтинг" value="5">
+                            </label>
+                            <label class="rating-stars__label">
+                                <svg width="16" height="16">
+                                    <use xlink:href="images/sprite.svg#icon-stars"></use>
+                                </svg>
+                                <input class="rating-stars__item stars-4" type="radio" name="Рейтинг" value="4">
+                            </label>
+                            <label class="rating-stars__label">
+                                <svg width="16" height="16">
+                                    <use xlink:href="images/sprite.svg#icon-stars"></use>
+                                </svg>
+                                <input class="rating-stars__item stars-3" type="radio" name="Рейтинг" value="3">
+                            </label>
+                            <label class="rating-stars__label">
+                                <svg width="16" height="16">
+                                    <use xlink:href="images/sprite.svg#icon-stars"></use>
+                                </svg>
+                                <input class="rating-stars__item stars-2" type="radio" name="Рейтинг" value="2">
+                            </label>
+                            <label class="rating-stars__label">
+                                <svg width="16" height="16">
+                                    <use xlink:href="images/sprite.svg#icon-stars"></use>
+                                </svg>
+                                <input class="rating-stars__item stars-1" type="radio" name="Рейтинг" value="1">
+                            </label>
+                        </div>
+                    </div>
                     <label class="form__label form__label--textarea">
                         Ваш отзыв *
                         <textarea class="form__field form__field--textarea" name="Отзыв"
@@ -633,12 +664,13 @@
                         </label>
                         <label class="form__label">
                             Email *
-                            <input class="form__field" type="email" name="email" placeholder="youremail@mail.com"
+                            <input class="form__field" type="email" name="Email" placeholder="youremail@mail.com"
                                 required>
                         </label>
                     </div>
                     <label class="form__label form__label--checkbox">
                         <input class="form__field form__field--checkbox" type="checkbox" name="Сохранить">
+                        <span class="form__checkbox"></span>
                         Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
                     </label>
                     <button class="button" type="submit">Оставить отзыв</button>

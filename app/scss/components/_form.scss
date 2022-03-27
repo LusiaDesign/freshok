@@ -15,20 +15,16 @@
         margin-bottom: 24px;
         width: 100%;
 
-        &--stars {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            margin-bottom: 14px;
-        }
-
         &--textarea {
             width: 58%;
             margin-bottom: 14px;
         }
 
         &--checkbox {
+            font-size: 14px;
+            display: flex;
             width: 100%;
+            padding-left: 35px;
         }
     }
 
@@ -60,6 +56,30 @@
         &--checkbox {
             margin-top: 0;
             width: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            position: absolute;
+
+            &:checked+.form__checkbox {
+                background-image: url('../../images/sprite.svg#icon-chek');
+                background-repeat: no-repeat;
+                background-size: 12px 9px;
+                background-position: center;
+                border: 1px solid $dark-500;
+            }
         }
+    }
+
+    &__checkbox {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        margin-left: -35px;
+        background-color: $silver-100;
+        border: 1px solid $silver-600;
+        border-radius: 3px;
+        color: $dark-500;
     }
 }

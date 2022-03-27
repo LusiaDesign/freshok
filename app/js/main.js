@@ -74,6 +74,10 @@ $(function () {
         $('.product-tabs__item').removeClass('active');
         $($(this).attr('href')).addClass('active');
     });
+    $('.rating-stars__label').on('click', function () {
+        $('.rating-stars__label').removeClass('checked');
+        $(this).addClass('checked');
+    });
     $(window).scroll(function () {
         $('.search').removeClass('active');
         $('.catalog-btn, .catalog__dropdown').removeClass('active');
