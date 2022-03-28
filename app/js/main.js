@@ -168,10 +168,18 @@ $(function () {
                     arrows: false,
                     dots: true,
                     infinite: true,
-                    /* autoplay: true,
-                     speed: 1000*/
+                    autoplay: true,
+                    speed: 1000
                 }
-            }
+            },
+            {
+                breakpoint: 374,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                }
+            },
         ]
     });
     $(document).mouseup(function (e) {
