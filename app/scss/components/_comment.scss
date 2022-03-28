@@ -7,10 +7,18 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         margin-bottom: 49px;
+
+        @media (max-width: 576px) {
+            margin-bottom: 29px;
+        }
     }
 
     &__list {
         margin-bottom: 72px;
+
+        @media (max-width: 576px) {
+            margin-bottom: 32px;
+        }
     }
 
     &__item {
@@ -23,10 +31,17 @@
             margin-bottom: 22px;
             padding-bottom: 24px;
             border-bottom: 1px solid $silver-600;
+
+            @media (max-width: 576px) {
+                margin-bottom: 27px;
+                padding-bottom: 18px;
+            }
         }
     }
 
     &__img {
+        background-image: url('../../images/userpic/bg-img.jpg');
+        @extend %bg;
         margin-right: 24px;
         border-radius: 50%;
     }
@@ -52,5 +67,9 @@
         color: $dark-500;
         margin-top: 27px;
         width: 100%;
+
+        @media (max-width: 576px) {
+            margin-top: 20px;
+        }
     }
 }

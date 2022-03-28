@@ -96,12 +96,38 @@ svg {
     font-family: 'Ruda', sans-serif;
     font-weight: 600;
     font-size: 32px;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 30px;
 
     @media (max-width: 576px) {
         margin-bottom: 24px;
         font-size: 24px;
+    }
+
+    &--product {
+        display: none;
+        line-height: 1.2;
+        text-transform: none;
+
+        @media (max-width: 1200px) {
+            display: block;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 26px;
+            margin-bottom: 27px;
+        }
+    }
+
+    &--product-card {
+        text-transform: none;
+        line-height: 1.2;
+        margin-bottom: 18px;
+
+        @media (max-width: 1200px) {
+            display: none;
+        }
     }
 }
 
@@ -159,11 +185,13 @@ svg {
 }
 
 .stars {
+    z-index: 0;
+
     .jq-ry-normal-group svg {
         fill: $silver-600;
 
         &:focus {
-            box-shadow: 0px 0px 0px 2px $green-100;
+            box-shadow: 0 0 0 2px $green-100;
             border-radius: 2px;
         }
 

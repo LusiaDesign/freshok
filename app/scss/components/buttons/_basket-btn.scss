@@ -47,18 +47,33 @@
     &--specification {
         display: flex;
         align-items: center;
+        padding: 14px 12px;
+        height: 44px;
+        width: auto;
+        margin-right: auto;
+
+        @media (max-width: 576px) {
+            padding: 10px 12px
+        }
+    }
+
+    &__icon {
+        margin-right: 12px;
+
+        @media (max-width: 576px) {
+            margin-right: 0;
+        }
+    }
+
+    &__text {
         font-weight: 600;
         font-size: 16px;
         line-height: 1;
         letter-spacing: 0.03em;
         text-transform: uppercase;
-        padding: 14px 12px;
-        height: 44px;
-        width: auto;
-        margin-right: auto;
-    }
 
-    &__icon {
-        margin-right: 12px;
+        @media (max-width: 576px) {
+            display: none;
+        }
     }
 }
