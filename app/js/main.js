@@ -36,9 +36,6 @@ $(function () {
             $('body').removeClass('no-scroll');
             $('body').addClass('no-scroll--mobile');
         }
-        if (w <= 576) {
-            $('body').removeClass('no-scroll--mobile');
-        }
     });
     $('.close-btn').on('click', function () {
         $('body').removeClass('no-scroll');
